@@ -1,3 +1,77 @@
-[gd_scene format=3 uid="uid://l2u6dc07gvs4"]
+[gd_scene format=4 uid="uid://l2u6dc07gvs4"]
+
+[ext_resource type="Texture2D" uid="uid://bxskhdikoufha" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0crete2_flr5.png" id="1_kek77"]
+[ext_resource type="Texture2D" uid="uid://b0qxdfti01s0b" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0crete4_flr01.png" id="2_4c57u"]
+[ext_resource type="Texture2D" uid="uid://daj320dah6rm0" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f01.png" id="3_efxa6"]
+[ext_resource type="Texture2D" uid="uid://b6kcbf02yewas" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f02.png" id="4_dg77c"]
+[ext_resource type="Texture2D" uid="uid://cqrng1bhbvwvp" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f03b.png" id="5_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://b7c3whaioxtqe" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0hfloor01.png" id="6_w48qg"]
+[ext_resource type="Texture2D" uid="uid://cqlw7ik42g7y3" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0c2a4_flr6b.png" id="7_vivmo"]
+[ext_resource type="Texture2D" uid="uid://nkoo4kuauutq" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0out_grnd3.png" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://l2ovfv1g5ahs" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0silo2_p2b.png" id="9_yaehf"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_074og"]
+tile_data = PackedInt32Array(0, 5, 0, 131072, 5, 0, 2, 5, 0, 131074, 5, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cegan"]
+texture = ExtResource("1_kek77")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82xsv"]
+texture = ExtResource("2_4c57u")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_getpj"]
+texture = ExtResource("3_efxa6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ryguw"]
+texture = ExtResource("4_dg77c")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d13ii"]
+texture = ExtResource("5_ycdy4")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1u8w0"]
+texture = ExtResource("6_w48qg")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0odxb"]
+texture = ExtResource("7_vivmo")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lswn8"]
+texture = ExtResource("8_2cqfq")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6jrf"]
+texture = ExtResource("9_yaehf")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xuqvo"]
+sources/0 = SubResource("TileSetAtlasSource_cegan")
+sources/1 = SubResource("TileSetAtlasSource_82xsv")
+sources/2 = SubResource("TileSetAtlasSource_getpj")
+sources/3 = SubResource("TileSetAtlasSource_ryguw")
+sources/4 = SubResource("TileSetAtlasSource_d13ii")
+sources/5 = SubResource("TileSetAtlasSource_1u8w0")
+sources/6 = SubResource("TileSetAtlasSource_0odxb")
+sources/7 = SubResource("TileSetAtlasSource_lswn8")
+sources/8 = SubResource("TileSetAtlasSource_a6jrf")
+pattern_0 = SubResource("TileMapPattern_074og")
 
 [node name="Node2D" type="Node2D" unique_id=958836224]
+
+[node name="Floors" type="TileMapLayer" parent="." unique_id=1833189701]
+tile_map_data = PackedByteArray("AAAIAAYAAAAAAAAAAAAMAAYAAwAAAAAAAAAMAAoAAwAAAAAAAAAMAA4AAwAAAAAAAAAQAA4AAwAAAAAAAAAQAAoAAwAAAAAAAAATAAkABQAAAAAAAAATAAsABQAAAAAAAAAVAAsABQAAAAAAAAAVAAkABQAAAAAAAAATAA0ABQAAAAAAAAATAA8ABQAAAAAAAAAVAA0ABQAAAAAAAAAVAA8ABQAAAAAAAAAXAA0ABQAAAAAAAAAXAA8ABQAAAAAAAAAZAA0ABQAAAAAAAAAZAA8ABQAAAAAAAAAXAAkABQAAAAAAAAAXAAsABQAAAAAAAAAZAAkABQAAAAAAAAAZAAsABQAAAAAAAAA=")
+tile_set = SubResource("TileSet_xuqvo")
+collision_enabled = false
