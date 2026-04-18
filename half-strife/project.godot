@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Half-Strife"
+run/main_scene="uid://l2u6dc07gvs4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

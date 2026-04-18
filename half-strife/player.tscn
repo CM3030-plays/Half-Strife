@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b3h5rjwlwgmww"]
+
+[ext_resource type="Texture2D" uid="uid://dduh268t0y2kn" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(1).png" id="1_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bamop42x5ln43" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(2).png" id="2_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://dwjonh4clp71b" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(3).png" id="3_dw050"]
+[ext_resource type="Texture2D" uid="uid://6rbcbs3xgqpn" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(4).png" id="4_b26j0"]
+[ext_resource type="Texture2D" uid="uid://bluby7oassu2x" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(5).png" id="5_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://xu686eawx4xi" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(6).png" id="6_nvl01"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1jxqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b26j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n7ghd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nvl01")
+}],
+"loop": true,
+"name": &"crowbarWalk",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nvl01"]
+radius = 14.0
+height = 46.0
+
+[node name="Player" type="CharacterBody2D" unique_id=645128869]
+metadata/_edit_group_ = true
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=2032355288]
+sprite_frames = SubResource("SpriteFrames_n7ghd")
+animation = &"crowbarWalk"
+frame_progress = 0.7387572
+
+[node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
+shape = SubResource("CapsuleShape2D_nvl01")
