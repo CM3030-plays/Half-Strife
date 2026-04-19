@@ -1,14 +1,105 @@
 [gd_scene format=3 uid="uid://b3h5rjwlwgmww"]
 
 [ext_resource type="Texture2D" uid="uid://dduh268t0y2kn" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(1).png" id="1_2hs0m"]
+[ext_resource type="Script" uid="uid://b4mw3broa5pkd" path="res://player.gd" id="1_7hik5"]
+[ext_resource type="Texture2D" uid="uid://btelcae2fbv05" path="res://assets/PlayerSprites/crowbar/crowbar-(1).png" id="1_jm5j8"]
 [ext_resource type="Texture2D" uid="uid://bamop42x5ln43" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(2).png" id="2_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://d1d4wicb1nt78" path="res://assets/PlayerSprites/crowbar/crowbar-(2).png" id="2_7hik5"]
 [ext_resource type="Texture2D" uid="uid://dwjonh4clp71b" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(3).png" id="3_dw050"]
+[ext_resource type="Texture2D" uid="uid://cd7puai6en6rk" path="res://assets/PlayerSprites/crowbar/crowbar-(3).png" id="3_qtqh7"]
+[ext_resource type="Texture2D" uid="uid://bx827bwudva8v" path="res://assets/PlayerSprites/crowbar/crowbar-(4).png" id="4_2wuci"]
 [ext_resource type="Texture2D" uid="uid://6rbcbs3xgqpn" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(4).png" id="4_b26j0"]
+[ext_resource type="Texture2D" uid="uid://e71x72cjec46" path="res://assets/PlayerSprites/crowbar/crowbar-(5).png" id="5_iruf7"]
 [ext_resource type="Texture2D" uid="uid://bluby7oassu2x" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(5).png" id="5_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://e5gasayx7th" path="res://assets/PlayerSprites/crowbar/crowbar-(6).png" id="6_j5n4i"]
 [ext_resource type="Texture2D" uid="uid://xu686eawx4xi" path="res://assets/PlayerSprites/crowbar/forwardCrowbar-(6).png" id="6_nvl01"]
+[ext_resource type="Texture2D" uid="uid://c7jkjdgqeubv4" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(1).png" id="7_634y6"]
+[ext_resource type="Texture2D" uid="uid://c8uw6po3uxbao" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(2).png" id="8_efrwb"]
+[ext_resource type="Texture2D" uid="uid://cwh6voupjsh3a" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(3).png" id="9_hiqhm"]
+[ext_resource type="Texture2D" uid="uid://dox5nw0ojnt3y" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(4).png" id="10_tkwlq"]
+[ext_resource type="Texture2D" uid="uid://bsnk7viv2hu7p" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(5).png" id="11_hl5qd"]
+[ext_resource type="Texture2D" uid="uid://cd16eq0ppw242" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(6).png" id="12_ek41f"]
+[ext_resource type="Texture2D" uid="uid://choagyin60taq" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(7).png" id="13_khis8"]
+[ext_resource type="Texture2D" uid="uid://bpogqnjc05ja2" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(8).png" id="14_b88wv"]
+[ext_resource type="Texture2D" uid="uid://duqc4dkt7f6yq" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(9).png" id="15_pgbbb"]
+[ext_resource type="Texture2D" uid="uid://dfqamj3tomfl3" path="res://assets/PlayerSprites/revolver/revolver-(1).png" id="22_331ug"]
+[ext_resource type="Texture2D" uid="uid://2hdx0p06jc2k" path="res://assets/PlayerSprites/revolver/revolver-(2).png" id="23_ny14h"]
+[ext_resource type="Texture2D" uid="uid://cc52affehpfox" path="res://assets/PlayerSprites/revolver/revolver-(3).png" id="24_ibah8"]
+[ext_resource type="Texture2D" uid="uid://ddqa07a8b8vlf" path="res://assets/PlayerSprites/revolver/revolver-(4).png" id="25_3iwfv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jm5j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7hik5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtqh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2wuci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_iruf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j5n4i")
+}],
+"loop": true,
+"name": &"crowbarAttack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jm5j8")
+}],
+"loop": true,
+"name": &"crowbarIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_634y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_efrwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hiqhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tkwlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hl5qd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ek41f")
+}],
+"loop": true,
+"name": &"crowbarLeft",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ek41f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_khis8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b88wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pgbbb")
+}],
+"loop": true,
+"name": &"crowbarRight",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_2hs0m")
@@ -31,19 +122,51 @@ animations = [{
 "loop": true,
 "name": &"crowbarWalk",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_331ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ny14h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ibah8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3iwfv")
+}],
+"loop": true,
+"name": &"revolverAttack",
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nvl01"]
-radius = 14.0
-height = 46.0
+height = 40.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hik5"]
+size = Vector2(69, 77)
 
 [node name="Player" type="CharacterBody2D" unique_id=645128869]
-metadata/_edit_group_ = true
+script = ExtResource("1_7hik5")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=2032355288]
+position = Vector2(0, 3)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"crowbarWalk"
-frame_progress = 0.7387572
+animation = &"crowbarAttack"
+frame_progress = 0.91290116
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
 shape = SubResource("CapsuleShape2D_nvl01")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Melee" type="Area2D" parent="." unique_id=1224267609]
+
+[node name="MeleeCollision" type="CollisionShape2D" parent="Melee" unique_id=1815069996]
+position = Vector2(35, 0)
+shape = SubResource("RectangleShape2D_7hik5")
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
