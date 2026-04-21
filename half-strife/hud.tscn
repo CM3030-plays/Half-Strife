@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://deceso5lld5l1" path="res://assets/crosshair.png" id="1_37p78"]
 [ext_resource type="Script" uid="uid://di0x3j7b0qx1w" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="FontFile" uid="uid://mgbyjyqdaawr" path="res://Fonts/trebuc.ttf" id="3_8sq4i"]
+
+[sub_resource type="Theme" id="Theme_640wx"]
+default_font = ExtResource("3_8sq4i")
 
 [node name="Hud" type="CanvasLayer" unique_id=1323355103]
 script = ExtResource("1_64ctp")
@@ -9,3 +13,15 @@ script = ExtResource("1_64ctp")
 [node name="Crosshair" type="Sprite2D" parent="." unique_id=1801639988]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_37p78")
+
+[node name="Label" type="Label" parent="." unique_id=752061176]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -47.0
+offset_right = 63.0
+grow_vertical = 0
+theme = SubResource("Theme_640wx")
+theme_override_colors/font_color = Color(1, 0.627451, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "100"

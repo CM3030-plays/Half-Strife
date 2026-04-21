@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://l2u6dc07gvs4"]
 
+[ext_resource type="PackedScene" uid="uid://bni5vjcq6iebc" path="res://hud.tscn" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://bxskhdikoufha" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0crete2_flr5.png" id="1_kek77"]
 [ext_resource type="Texture2D" uid="uid://daj320dah6rm0" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f01.png" id="3_efxa6"]
 [ext_resource type="Texture2D" uid="uid://b6kcbf02yewas" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f02.png" id="4_dg77c"]
@@ -7,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://b3h5rjwlwgmww" path="res://player.tscn" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://cqlw7ik42g7y3" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0c2a4_flr6b.png" id="7_vivmo"]
 [ext_resource type="Texture2D" uid="uid://nkoo4kuauutq" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0out_grnd3.png" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://c5vorju72jei7" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech7b.png" id="8_dg77c"]
+[ext_resource type="Texture2D" uid="uid://b7ksvevxmsba" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech7.png" id="9_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://evriqg8amuyy" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech_c5.png" id="10_w48qg"]
+[ext_resource type="Texture2D" uid="uid://bfco6cv1ihwdi" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech8b.png" id="11_vivmo"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_074og"]
 tile_data = PackedInt32Array(0, 5, 0, 131072, 5, 0, 2, 5, 0, 131074, 5, 0)
@@ -51,7 +56,29 @@ sources/6 = SubResource("TileSetAtlasSource_0odxb")
 sources/7 = SubResource("TileSetAtlasSource_lswn8")
 pattern_0 = SubResource("TileMapPattern_074og")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cqfq"]
+texture = ExtResource("8_dg77c")
+texture_region_size = Vector2i(64, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yaehf"]
+texture = ExtResource("9_ycdy4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_074og"]
+texture = ExtResource("10_w48qg")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82xsv"]
+texture = ExtResource("11_vivmo")
+
+[sub_resource type="TileSet" id="TileSet_getpj"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_2cqfq")
+sources/1 = SubResource("TileSetAtlasSource_yaehf")
+sources/2 = SubResource("TileSetAtlasSource_074og")
+sources/3 = SubResource("TileSetAtlasSource_82xsv")
+
 [node name="Node2D" type="Node2D" unique_id=958836224]
+
+[node name="Hud" parent="." unique_id=1323355103 instance=ExtResource("1_5vw27")]
 
 [node name="Floors" type="TileMapLayer" parent="." unique_id=1833189701]
 scale = Vector2(0.75, 0.75)
@@ -60,6 +87,7 @@ tile_set = SubResource("TileSet_xuqvo")
 collision_enabled = false
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=272774111]
+tile_set = SubResource("TileSet_getpj")
 
 [node name="Player" parent="." unique_id=645128869 instance=ExtResource("7_272bh")]
 position = Vector2(343, 227)

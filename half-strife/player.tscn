@@ -50,7 +50,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"crowbarAttack",
-"speed": 15.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -154,8 +154,8 @@ script = ExtResource("1_7hik5")
 position = Vector2(0, 3)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"crowbarAttack"
-frame_progress = 0.91290116
+animation = &"crowbarIdle"
+frame_progress = 0.726836
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
 shape = SubResource("CapsuleShape2D_nvl01")
@@ -170,3 +170,5 @@ position = Vector2(35, 0)
 shape = SubResource("RectangleShape2D_7hik5")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
+
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
