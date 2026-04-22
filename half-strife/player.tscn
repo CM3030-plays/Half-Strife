@@ -147,15 +147,25 @@ height = 40.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hik5"]
 size = Vector2(69, 77)
 
+[sub_resource type="Gradient" id="Gradient_7hik5"]
+offsets = PackedFloat32Array(0, 0.87349397)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qtqh7"]
+gradient = SubResource("Gradient_7hik5")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9000001, 0.1)
+
 [node name="Player" type="CharacterBody2D" unique_id=645128869]
+motion_mode = 1
 script = ExtResource("1_7hik5")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=2032355288]
 position = Vector2(0, 3)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"crowbarIdle"
-frame_progress = 0.726836
+animation = &"crowbarAttack"
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
 shape = SubResource("CapsuleShape2D_nvl01")
@@ -170,5 +180,11 @@ position = Vector2(35, 0)
 shape = SubResource("RectangleShape2D_7hik5")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1925442366]
+position = Vector2(-1.0000153, -1.4999981)
+scale = Vector2(12.031249, 6.796875)
+blend_mode = 2
+texture = SubResource("GradientTexture2D_qtqh7")
 
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]

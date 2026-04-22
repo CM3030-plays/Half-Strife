@@ -24,6 +24,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
+	if currentWeapon == "crowbar":
+		$AttackCooldown.wait_time = 0.4
+	
 	if Input.is_action_pressed("click"):
 		animation = "Attack"
 		if $AttackCooldown.is_stopped():
