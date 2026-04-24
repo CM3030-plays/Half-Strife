@@ -24,6 +24,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
+	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
+	
 	if currentWeapon == "crowbar":
 		$AttackCooldown.wait_time = 0.4
 	
@@ -33,18 +35,25 @@ func _process(delta: float) -> void:
 			$AttackCooldown.start()
 	else:
 		if $AttackCooldown.is_stopped():
-			if velocity.is_zero_approx():
+			print("debug")
+			if input_dir == Vector2.ZERO:
 				animation = "Idle"
 			else:
 				var forward = Vector2.RIGHT.rotated(rotation)
-				var move_dir = velocity.normalized()
+				var right = forward.rotated(PI / 2)
+				var move_dir = input_dir.normalized()
 				
-				var angle = forward.angle_to(move_dir) # radians
-				
-				if abs(angle) <= deg_to_rad(45):
-					animation = "Walk"
+				var right_dot = right.dot(move_dir)
+
+				# If mostly sideways → left/right
+				if abs(right_dot) > 0.5:
+					if right_dot > 0:
+						animation = "Right"
+					else:
+						animation = "Left"
 				else:
-					animation = "Idle"
+					# Otherwise → forward OR backward (same animation)
+					animation = "Walk"
 
 	$PlayerSprite.animation = str(currentWeapon) + animation
 		

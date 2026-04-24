@@ -7,6 +7,17 @@
 [sub_resource type="Theme" id="Theme_640wx"]
 default_font = ExtResource("3_8sq4i")
 
+[sub_resource type="Gradient" id="Gradient_7hik5"]
+offsets = PackedFloat32Array(0, 0.75301206, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.25301206, 0.25301206, 0.25301206, 1, 0.064700164, 0.064700164, 0.064700164, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8sq4i"]
+gradient = SubResource("Gradient_7hik5")
+width = 114
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9478261, 0.3652174)
+
 [node name="Hud" type="CanvasLayer" unique_id=1323355103]
 script = ExtResource("1_64ctp")
 
@@ -25,3 +36,17 @@ theme = SubResource("Theme_640wx")
 theme_override_colors/font_color = Color(1, 0.627451, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "100"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=51370813]
+position = Vector2(576, 320)
+scale = Vector2(11.22807, 11.999999)
+shadow_enabled = true
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_8sq4i")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1313003202]
+position = Vector2(576, 320)
+scale = Vector2(11.22807, 11.999999)
+energy = 0.81
+blend_mode = 1
+height = 0.07

@@ -94,6 +94,9 @@ sources/1 = SubResource("TileSetAtlasSource_yaehf")
 sources/2 = SubResource("TileSetAtlasSource_074og")
 sources/3 = SubResource("TileSetAtlasSource_82xsv")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dg77c"]
+polygon = PackedVector2Array(320, 192, 832, 192, 832, 64, 320, 64)
+
 [node name="Node2D" type="Node2D" unique_id=958836224]
 
 [node name="Hud" parent="." unique_id=1323355103 instance=ExtResource("1_5vw27")]
@@ -105,10 +108,15 @@ tile_set = SubResource("TileSet_xuqvo")
 collision_enabled = false
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=272774111]
+z_index = 1
 scale = Vector2(0.75, 0.75)
 tile_map_data = PackedByteArray("AAAFAAUAAwAAAAAAAAAGAAUAAwABAAAAAAAHAAUAAwAAAAAAAAAIAAUAAwABAAAAAAAJAAUAAwAAAAAAAAAKAAUAAwABAAAAAAALAAUAAwAAAAAAAAAMAAUAAwABAAAAAAAFAAYAAwAAAAEAAAAGAAYAAwABAAEAAAAFAAcAAwAAAAEAAAAGAAcAAwABAAEAAAAHAAYAAwAAAAEAAAAIAAYAAwABAAEAAAAHAAcAAwAAAAEAAAAIAAcAAwABAAEAAAAJAAYAAwAAAAEAAAAKAAYAAwABAAEAAAAJAAcAAwAAAAEAAAAKAAcAAwABAAEAAAALAAYAAwAAAAEAAAAMAAYAAwABAAEAAAALAAcAAwAAAAEAAAAMAAcAAwABAAEAAAAFAAIAAwABAAAAADAFAAEAAwABAAEAADAGAAIAAwAAAAAAADAGAAEAAwAAAAEAADAHAAIAAwABAAAAADAHAAEAAwABAAEAADAIAAIAAwAAAAAAADAIAAEAAwAAAAEAADAJAAIAAwABAAAAADAJAAEAAwABAAEAADAKAAIAAwAAAAAAADAKAAEAAwAAAAEAADALAAIAAwABAAAAADALAAEAAwABAAEAADAMAAIAAwAAAAAAADAMAAEAAwAAAAEAADA=")
 tile_set = SubResource("TileSet_getpj")
 collision_visibility_mode = 1
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Walls" unique_id=1773938410]
+occluder = SubResource("OccluderPolygon2D_dg77c")
+sdf_collision = false
 
 [node name="Player" parent="." unique_id=645128869 instance=ExtResource("7_272bh")]
 position = Vector2(246, 187)
