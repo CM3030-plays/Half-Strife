@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b7ksvevxmsba" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech7.png" id="9_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://evriqg8amuyy" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech_c5.png" id="10_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bfco6cv1ihwdi" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech8b.png" id="11_vivmo"]
+[ext_resource type="PackedScene" uid="uid://bscf74onitq78" path="res://headcrab.tscn" id="13_ycdy4"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_074og"]
 tile_data = PackedInt32Array(0, 5, 0, 131072, 5, 0, 2, 5, 0, 131074, 5, 0)
@@ -107,7 +108,7 @@ tile_map_data = PackedByteArray("AADx//H/AwAAAAAAAADx//L/AwAAAAAAAADx//P/AwAAAAA
 tile_set = SubResource("TileSet_xuqvo")
 collision_enabled = false
 
-[node name="Walls" type="TileMapLayer" parent="." unique_id=272774111]
+[node name="Walls" type="TileMapLayer" parent="." unique_id=272774111 groups=["enemies"]]
 z_index = 1
 scale = Vector2(0.75, 0.75)
 tile_map_data = PackedByteArray("AAAFAAUAAwAAAAAAAAAGAAUAAwABAAAAAAAHAAUAAwAAAAAAAAAIAAUAAwABAAAAAAAJAAUAAwAAAAAAAAAKAAUAAwABAAAAAAALAAUAAwAAAAAAAAAMAAUAAwABAAAAAAAFAAYAAwAAAAEAAAAGAAYAAwABAAEAAAAFAAcAAwAAAAEAAAAGAAcAAwABAAEAAAAHAAYAAwAAAAEAAAAIAAYAAwABAAEAAAAHAAcAAwAAAAEAAAAIAAcAAwABAAEAAAAJAAYAAwAAAAEAAAAKAAYAAwABAAEAAAAJAAcAAwAAAAEAAAAKAAcAAwABAAEAAAALAAYAAwAAAAEAAAAMAAYAAwABAAEAAAALAAcAAwAAAAEAAAAMAAcAAwABAAEAAAAFAAIAAwABAAAAADAFAAEAAwABAAEAADAGAAIAAwAAAAAAADAGAAEAAwAAAAEAADAHAAIAAwABAAAAADAHAAEAAwABAAEAADAIAAIAAwAAAAAAADAIAAEAAwAAAAEAADAJAAIAAwABAAAAADAJAAEAAwABAAEAADAKAAIAAwAAAAAAADAKAAEAAwAAAAEAADALAAIAAwABAAAAADALAAEAAwABAAEAADAMAAIAAwAAAAAAADAMAAEAAwAAAAEAADA=")
@@ -120,3 +121,6 @@ sdf_collision = false
 
 [node name="Player" parent="." unique_id=645128869 instance=ExtResource("7_272bh")]
 position = Vector2(246, 187)
+
+[node name="Headcrab" parent="." unique_id=2052064186 groups=["enemies"] instance=ExtResource("13_ycdy4")]
+position = Vector2(369, 191)

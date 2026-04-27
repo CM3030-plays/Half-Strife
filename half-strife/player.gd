@@ -8,6 +8,8 @@ const playerWalkAngle = [45, -45]
 var currentWeapon
 var animation
 
+signal attack
+
 func _ready() -> void:
 	$PlayerSprite.play("crowbarIdle")
 	currentWeapon = "crowbar"
@@ -33,9 +35,9 @@ func _process(delta: float) -> void:
 		animation = "Attack"
 		if $AttackCooldown.is_stopped():
 			$AttackCooldown.start()
+			attack.emit(currentWeapon)
 	else:
 		if $AttackCooldown.is_stopped():
-			print("debug")
 			if input_dir == Vector2.ZERO:
 				animation = "Idle"
 			else:
@@ -57,8 +59,6 @@ func _process(delta: float) -> void:
 
 	$PlayerSprite.animation = str(currentWeapon) + animation
 		
-func attack():
-	pass
 
 
 func _on_attack_cooldown_timeout() -> void:

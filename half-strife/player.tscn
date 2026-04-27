@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://2hdx0p06jc2k" path="res://assets/PlayerSprites/revolver/revolver-(2).png" id="23_ny14h"]
 [ext_resource type="Texture2D" uid="uid://cc52affehpfox" path="res://assets/PlayerSprites/revolver/revolver-(3).png" id="24_ibah8"]
 [ext_resource type="Texture2D" uid="uid://ddqa07a8b8vlf" path="res://assets/PlayerSprites/revolver/revolver-(4).png" id="25_3iwfv"]
+[ext_resource type="Script" uid="uid://d0ntsbuogbcow" path="res://melee.gd" id="27_qtqh7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
 animations = [{
@@ -164,6 +165,8 @@ shape = SubResource("CapsuleShape2D_nvl01")
 zoom = Vector2(1.5, 1.5)
 
 [node name="Melee" type="Area2D" parent="." unique_id=1224267609]
+collision_mask = 2
+script = ExtResource("27_qtqh7")
 
 [node name="MeleeCollision" type="CollisionShape2D" parent="Melee" unique_id=1815069996]
 position = Vector2(35, 0)
@@ -171,4 +174,7 @@ shape = SubResource("RectangleShape2D_7hik5")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
 
+[connection signal="attack" from="." to="Melee" method="_on_player_attack"]
+[connection signal="body_entered" from="Melee" to="Melee" method="_on_body_entered"]
+[connection signal="body_exited" from="Melee" to="Melee" method="_on_body_exited"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
