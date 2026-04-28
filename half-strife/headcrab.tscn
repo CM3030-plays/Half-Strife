@@ -15,3 +15,5 @@ sprite_frames = SubResource("SpriteFrames_5idhp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=307324724]
 shape = SubResource("CircleShape2D_i5p6d")
+
+[node name="sounds" type="AudioStreamPlayer2D" parent="." unique_id=1539645752]

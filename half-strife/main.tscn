@@ -57,46 +57,81 @@ sources/6 = SubResource("TileSetAtlasSource_0odxb")
 sources/7 = SubResource("TileSetAtlasSource_lswn8")
 pattern_0 = SubResource("TileMapPattern_074og")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ycdy4"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cqfq"]
 texture = ExtResource("8_dg77c")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ycdy4")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ycdy4")
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ycdy4")
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ycdy4")
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w48qg"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yaehf"]
 texture = ExtResource("9_ycdy4")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_w48qg")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_w48qg")
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_w48qg")
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_w48qg")
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vivmo"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_074og"]
 texture = ExtResource("10_w48qg")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_vivmo")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2cqfq"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82xsv"]
 texture = ExtResource("11_vivmo")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2cqfq")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2cqfq")
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2cqfq")
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2cqfq")
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_getpj"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 255
-physics_layer_0/collision_mask = 255
+occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2cqfq")
 sources/1 = SubResource("TileSetAtlasSource_yaehf")
 sources/2 = SubResource("TileSetAtlasSource_074og")
 sources/3 = SubResource("TileSetAtlasSource_82xsv")
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dg77c"]
-polygon = PackedVector2Array(320, 192, 832, 192, 832, 64, 320, 64)
 
 [node name="Node2D" type="Node2D" unique_id=958836224]
 
@@ -108,16 +143,11 @@ tile_map_data = PackedByteArray("AADx//H/AwAAAAAAAADx//L/AwAAAAAAAADx//P/AwAAAAA
 tile_set = SubResource("TileSet_xuqvo")
 collision_enabled = false
 
-[node name="Walls" type="TileMapLayer" parent="." unique_id=272774111 groups=["enemies"]]
+[node name="Walls" type="TileMapLayer" parent="." unique_id=272774111]
 z_index = 1
 scale = Vector2(0.75, 0.75)
 tile_map_data = PackedByteArray("AAAFAAUAAwAAAAAAAAAGAAUAAwABAAAAAAAHAAUAAwAAAAAAAAAIAAUAAwABAAAAAAAJAAUAAwAAAAAAAAAKAAUAAwABAAAAAAALAAUAAwAAAAAAAAAMAAUAAwABAAAAAAAFAAYAAwAAAAEAAAAGAAYAAwABAAEAAAAFAAcAAwAAAAEAAAAGAAcAAwABAAEAAAAHAAYAAwAAAAEAAAAIAAYAAwABAAEAAAAHAAcAAwAAAAEAAAAIAAcAAwABAAEAAAAJAAYAAwAAAAEAAAAKAAYAAwABAAEAAAAJAAcAAwAAAAEAAAAKAAcAAwABAAEAAAALAAYAAwAAAAEAAAAMAAYAAwABAAEAAAALAAcAAwAAAAEAAAAMAAcAAwABAAEAAAAFAAIAAwABAAAAADAFAAEAAwABAAEAADAGAAIAAwAAAAAAADAGAAEAAwAAAAEAADAHAAIAAwABAAAAADAHAAEAAwABAAEAADAIAAIAAwAAAAAAADAIAAEAAwAAAAEAADAJAAIAAwABAAAAADAJAAEAAwABAAEAADAKAAIAAwAAAAAAADAKAAEAAwAAAAEAADALAAIAAwABAAAAADALAAEAAwABAAEAADAMAAIAAwAAAAAAADAMAAEAAwAAAAEAADA=")
 tile_set = SubResource("TileSet_getpj")
-collision_visibility_mode = 1
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Walls" unique_id=1773938410]
-occluder = SubResource("OccluderPolygon2D_dg77c")
-sdf_collision = false
 
 [node name="Player" parent="." unique_id=645128869 instance=ExtResource("7_272bh")]
 position = Vector2(246, 187)

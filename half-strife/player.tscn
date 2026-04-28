@@ -174,6 +174,11 @@ shape = SubResource("RectangleShape2D_7hik5")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
 
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1600107113]
+current = true
+
+[node name="Weapons" type="AudioStreamPlayer2D" parent="." unique_id=2007322071]
+
 [connection signal="attack" from="." to="Melee" method="_on_player_attack"]
 [connection signal="body_entered" from="Melee" to="Melee" method="_on_body_entered"]
 [connection signal="body_exited" from="Melee" to="Melee" method="_on_body_exited"]

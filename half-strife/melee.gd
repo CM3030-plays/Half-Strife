@@ -17,6 +17,13 @@ func _on_body_exited(body: Node2D) -> void:
 func _on_player_attack(weapon : String) -> void:
 	print("attack")
 	if weapon == "crowbar":
+		if bodys.size() > 0:
+			$"../Weapons".stream = AudioFiles.sfx["crowbar_hit"]
+		else:
+			$"../Weapons".stream = AudioFiles.sfx["crowbar_miss"]
+			
+		$"../Weapons".play()
+		
 		for body in bodys:
 			if body.has_method("takeDamage"):
 				body.takeDamage(10)
