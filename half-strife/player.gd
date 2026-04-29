@@ -5,14 +5,13 @@ extends CharacterBody2D
 
 const playerWalkAngle = [45, -45]
 
-var currentWeapon
+@export var currentWeapon = "crowbar"
 var animation
 
 signal attack
 
 func _ready() -> void:
 	$PlayerSprite.play("crowbarIdle")
-	currentWeapon = "crowbar"
 	
 
 func _physics_process(delta: float) -> void:
@@ -54,7 +53,7 @@ func _process(delta: float) -> void:
 					else:
 						animation = "Left"
 				else:
-					# Otherwise → forward OR backward (same animation)
+					# Otherwise → forward OR backward (sad animation)
 					animation = "Walk"
 
 	$PlayerSprite.animation = str(currentWeapon) + animation

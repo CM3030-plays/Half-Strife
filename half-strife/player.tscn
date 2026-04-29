@@ -26,7 +26,58 @@
 [ext_resource type="Texture2D" uid="uid://2hdx0p06jc2k" path="res://assets/PlayerSprites/revolver/revolver-(2).png" id="23_ny14h"]
 [ext_resource type="Texture2D" uid="uid://cc52affehpfox" path="res://assets/PlayerSprites/revolver/revolver-(3).png" id="24_ibah8"]
 [ext_resource type="Texture2D" uid="uid://ddqa07a8b8vlf" path="res://assets/PlayerSprites/revolver/revolver-(4).png" id="25_3iwfv"]
-[ext_resource type="Script" uid="uid://d0ntsbuogbcow" path="res://melee.gd" id="27_qtqh7"]
+[ext_resource type="Texture2D" uid="uid://c2m08gn8fnvw5" path="res://assets/PlayerSprites/revolver/revolverForward-(1).png" id="27_0jj5r"]
+[ext_resource type="Script" uid="uid://ccy4djv7v5pup" path="res://attack.gd" id="27_qtqh7"]
+[ext_resource type="Texture2D" uid="uid://r7tk04qys3o0" path="res://assets/PlayerSprites/revolver/revolverForward-(2).png" id="28_77e46"]
+[ext_resource type="Texture2D" uid="uid://i7nmoywiafv8" path="res://assets/PlayerSprites/revolver/revolverForward-(3).png" id="29_cy2ki"]
+[ext_resource type="Texture2D" uid="uid://8ra13bposcyx" path="res://assets/PlayerSprites/revolver/revolverForward-(4).png" id="30_04cqw"]
+[ext_resource type="Texture2D" uid="uid://0x4xgqgdmcd7" path="res://assets/PlayerSprites/revolver/revolverForward-(5).png" id="31_vihdy"]
+[ext_resource type="Texture2D" uid="uid://dac3m36pulcat" path="res://assets/PlayerSprites/revolver/revolverForward-(6).png" id="32_7c55y"]
+[ext_resource type="Texture2D" uid="uid://dovq4t4awr12n" path="res://assets/PlayerSprites/shotgun/shotgunFire-(1).png" id="33_hoal8"]
+[ext_resource type="Texture2D" uid="uid://cgyumwi6xqli7" path="res://assets/PlayerSprites/shotgun/shotgunFire-(2).png" id="34_htija"]
+[ext_resource type="Texture2D" uid="uid://b5d7ynjakscqm" path="res://assets/PlayerSprites/shotgun/shotgunFire-(3).png" id="35_he65s"]
+[ext_resource type="Texture2D" uid="uid://dfht8tob11tx8" path="res://assets/PlayerSprites/shotgun/shotgunFire-(4).png" id="36_c0yt3"]
+[ext_resource type="Texture2D" uid="uid://fkqspubpeiyc" path="res://assets/PlayerSprites/shotgun/shotgunFire-(5).png" id="37_uckl6"]
+[ext_resource type="Texture2D" uid="uid://datn6tat5lyuh" path="res://assets/PlayerSprites/shotgun/shotgunFire-(6).png" id="38_5ihbc"]
+[ext_resource type="Texture2D" uid="uid://bf1dhttbi4xbt" path="res://assets/PlayerSprites/shotgun/shotgunFire-(7).png" id="39_sc53x"]
+[ext_resource type="Texture2D" uid="uid://b001j3kqcsjpu" path="res://assets/PlayerSprites/shotgun/shotgunFire-(8).png" id="40_ro7of"]
+[ext_resource type="Texture2D" uid="uid://droc27p0h2c3q" path="res://assets/PlayerSprites/shotgun/shotgunFire-(9).png" id="41_dn2kn"]
+[ext_resource type="Texture2D" uid="uid://by1ceafpc28s5" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(1).png" id="42_4tmhn"]
+[ext_resource type="Texture2D" uid="uid://j8xnhwmia8k2" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(2).png" id="43_gpvxe"]
+[ext_resource type="Texture2D" uid="uid://rfct7b5pjkau" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(3).png" id="44_qicb8"]
+[ext_resource type="Texture2D" uid="uid://dgy04igrjigen" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(4).png" id="45_6o2m3"]
+[ext_resource type="Texture2D" uid="uid://epwuxawbc8gp" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(5).png" id="46_2hmo1"]
+[ext_resource type="Texture2D" uid="uid://g3s7v1j3r48g" path="res://assets/PlayerSprites/shotgun/shotgunRight-(1).png" id="47_uygay"]
+[ext_resource type="Texture2D" uid="uid://bdbhjxyso6kda" path="res://assets/PlayerSprites/shotgun/shotgunRight-(2).png" id="48_rpay4"]
+[ext_resource type="Texture2D" uid="uid://bpf86dtu0gu3e" path="res://assets/PlayerSprites/shotgun/shotgunRight-(3).png" id="49_xfa3h"]
+[ext_resource type="Texture2D" uid="uid://dh3lb5wwbg1p8" path="res://assets/PlayerSprites/shotgun/shotgunRight-(4).png" id="50_04g4e"]
+[ext_resource type="Texture2D" uid="uid://cmy332ey1qedw" path="res://assets/PlayerSprites/shotgun/shotgunRight-(5).png" id="51_lx1qc"]
+[ext_resource type="Texture2D" uid="uid://b3qy0sp2xks3x" path="res://assets/PlayerSprites/shotgun/shotgunForward-(1).png" id="52_elm0x"]
+[ext_resource type="Texture2D" uid="uid://c1gjjfy2xafi8" path="res://assets/PlayerSprites/shotgun/shotgunForward-(2).png" id="53_k7vj2"]
+[ext_resource type="Texture2D" uid="uid://c713qpicwsvbu" path="res://assets/PlayerSprites/shotgun/shotgunForward-(3).png" id="54_dtw5u"]
+[ext_resource type="Texture2D" uid="uid://bolbuqrtnsajn" path="res://assets/PlayerSprites/shotgun/shotgunForward-(4).png" id="55_f37gn"]
+[ext_resource type="Texture2D" uid="uid://c6cuv4b61j8k4" path="res://assets/PlayerSprites/shotgun/shotgunForward-(5).png" id="56_jccjf"]
+[ext_resource type="Texture2D" uid="uid://pymqqspivq77" path="res://assets/PlayerSprites/shotgun/shotgunForward-(6).png" id="57_qhi2v"]
+[ext_resource type="Texture2D" uid="uid://dbunui3qswsc0" path="res://assets/PlayerSprites/shotgun/shotgunForward-(7).png" id="58_ipvpa"]
+[ext_resource type="Texture2D" uid="uid://c0eyav33rx1gi" path="res://assets/PlayerSprites/smg/smgFire-(1).png" id="59_nevyh"]
+[ext_resource type="Texture2D" uid="uid://bwem6bnvrvxft" path="res://assets/PlayerSprites/smg/smgFire-(2).png" id="60_hhr50"]
+[ext_resource type="Texture2D" uid="uid://c80q7opqderup" path="res://assets/PlayerSprites/smg/smgLeft-(1).png" id="61_8u4el"]
+[ext_resource type="Texture2D" uid="uid://dabv3u4126476" path="res://assets/PlayerSprites/smg/smgLeft-(2).png" id="62_a5i73"]
+[ext_resource type="Texture2D" uid="uid://2oaeot8vw4cy" path="res://assets/PlayerSprites/smg/smgLeft-(3).png" id="63_j7swm"]
+[ext_resource type="Texture2D" uid="uid://dgd7frorgm6s2" path="res://assets/PlayerSprites/smg/smgLeft-(4).png" id="64_bobas"]
+[ext_resource type="Texture2D" uid="uid://d2x7yxtrmyhd3" path="res://assets/PlayerSprites/smg/smgLeft-(5).png" id="65_vmuuc"]
+[ext_resource type="Texture2D" uid="uid://c61qsh1scmh11" path="res://assets/PlayerSprites/smg/smgLeft-(6).png" id="66_j6q74"]
+[ext_resource type="Texture2D" uid="uid://dawvb2vhqdrjr" path="res://assets/PlayerSprites/smg/smgRight-(1).png" id="67_hhe1y"]
+[ext_resource type="Texture2D" uid="uid://dh3juoykn6kvm" path="res://assets/PlayerSprites/smg/smgRight-(2).png" id="68_6jk4c"]
+[ext_resource type="Texture2D" uid="uid://cljcj4snvffni" path="res://assets/PlayerSprites/smg/smgRight-(3).png" id="69_8hr8l"]
+[ext_resource type="Texture2D" uid="uid://dr6tqbuj1qqtw" path="res://assets/PlayerSprites/smg/smgRight-(4).png" id="70_c2etn"]
+[ext_resource type="Texture2D" uid="uid://ekfm2x4ks2o8" path="res://assets/PlayerSprites/smg/smgRight-(5).png" id="71_cgqxi"]
+[ext_resource type="Texture2D" uid="uid://dkir3a83u48pw" path="res://assets/PlayerSprites/smg/smgForward-(1).png" id="72_api4a"]
+[ext_resource type="Texture2D" uid="uid://c7lanhqsj1bxi" path="res://assets/PlayerSprites/smg/smgForward-(2).png" id="73_o67lt"]
+[ext_resource type="Texture2D" uid="uid://b46kw3nd3aex" path="res://assets/PlayerSprites/smg/smgForward-(3).png" id="74_8xvhe"]
+[ext_resource type="Texture2D" uid="uid://q3t4p3c3sshh" path="res://assets/PlayerSprites/smg/smgForward-(4).png" id="75_yelk6"]
+[ext_resource type="Texture2D" uid="uid://c58kekaywy0sb" path="res://assets/PlayerSprites/smg/smgForward-(5).png" id="76_v3rbc"]
+[ext_resource type="Texture2D" uid="uid://tiaab4viyo47" path="res://assets/PlayerSprites/smg/smgForward-(6).png" id="77_0wr1b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
 animations = [{
@@ -140,46 +191,297 @@ animations = [{
 "loop": true,
 "name": &"revolverAttack",
 "speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"revolverIdle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"revolverLeft",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"revolverRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_0jj5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_77e46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_cy2ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_04cqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_vihdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_7c55y")
+}],
+"loop": true,
+"name": &"revolverWalk",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_hoal8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_htija")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_he65s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_c0yt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_uckl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_5ihbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_sc53x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_ro7of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_dn2kn")
+}],
+"loop": true,
+"name": &"shotgunAttack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_hoal8")
+}],
+"loop": true,
+"name": &"shotgunIdle",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_4tmhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gpvxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_qicb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_6o2m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_2hmo1")
+}],
+"loop": true,
+"name": &"shotgunLeft",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_uygay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_rpay4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_xfa3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_04g4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_lx1qc")
+}],
+"loop": true,
+"name": &"shotgunRight",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_elm0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_k7vj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_dtw5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_f37gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_jccjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_qhi2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ipvpa")
+}],
+"loop": true,
+"name": &"shotgunWalk",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("59_nevyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_hhr50")
+}],
+"loop": true,
+"name": &"smgAttack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("59_nevyh")
+}],
+"loop": true,
+"name": &"smgIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("61_8u4el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_a5i73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_j7swm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_bobas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_vmuuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_j6q74")
+}],
+"loop": true,
+"name": &"smgLeft",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67_hhe1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_6jk4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_8hr8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_c2etn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_cgqxi")
+}],
+"loop": true,
+"name": &"smgRight",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("72_api4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_o67lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_8xvhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_yelk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_v3rbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_0wr1b")
+}],
+"loop": true,
+"name": &"smgWalk",
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nvl01"]
 height = 40.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hik5"]
-size = Vector2(69, 77)
+size = Vector2(50, 50)
 
 [node name="Player" type="CharacterBody2D" unique_id=645128869]
 motion_mode = 1
 script = ExtResource("1_7hik5")
+currentWeapon = "shotgun"
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=2032355288]
 position = Vector2(0, 3)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"crowbarRight"
+animation = &"smgAttack"
+frame_progress = 0.81773984
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
+visible = false
 shape = SubResource("CapsuleShape2D_nvl01")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
+visible = false
 zoom = Vector2(1.5, 1.5)
 
-[node name="Melee" type="Area2D" parent="." unique_id=1224267609]
+[node name="Attack" type="Area2D" parent="." unique_id=1224267609]
+visible = false
 collision_mask = 2
 script = ExtResource("27_qtqh7")
 
-[node name="MeleeCollision" type="CollisionShape2D" parent="Melee" unique_id=1815069996]
-position = Vector2(35, 0)
+[node name="MeleeCollision" type="CollisionShape2D" parent="Attack" unique_id=1815069996]
+position = Vector2(26, 0)
 shape = SubResource("RectangleShape2D_7hik5")
+
+[node name="Straight" type="RayCast2D" parent="Attack" unique_id=1225003553]
+target_position = Vector2(704, 0)
+
+[node name="Spread1" type="RayCast2D" parent="Attack" unique_id=358862010]
+target_position = Vector2(704, 16)
+
+[node name="Spread2" type="RayCast2D" parent="Attack" unique_id=683377724]
+target_position = Vector2(704, -16)
+
+[node name="Spread3" type="RayCast2D" parent="Attack" unique_id=246795360]
+target_position = Vector2(704, -32)
+
+[node name="Spread4" type="RayCast2D" parent="Attack" unique_id=1509635740]
+target_position = Vector2(704, 32)
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1600107113]
+visible = false
 current = true
 
 [node name="Weapons" type="AudioStreamPlayer2D" parent="." unique_id=2007322071]
+visible = false
 
-[connection signal="attack" from="." to="Melee" method="_on_player_attack"]
-[connection signal="body_entered" from="Melee" to="Melee" method="_on_body_entered"]
-[connection signal="body_exited" from="Melee" to="Melee" method="_on_body_exited"]
+[connection signal="attack" from="." to="Attack" method="_on_player_attack"]
+[connection signal="body_entered" from="Attack" to="Attack" method="_on_body_entered"]
+[connection signal="body_exited" from="Attack" to="Attack" method="_on_body_exited"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
