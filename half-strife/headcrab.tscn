@@ -1,8 +1,18 @@
 [gd_scene format=3 uid="uid://bscf74onitq78"]
 
 [ext_resource type="Script" uid="uid://bw4k2fo14uif" path="res://headcrab.gd" id="1_i5p6d"]
+[ext_resource type="Texture2D" uid="uid://btelcae2fbv05" path="res://assets/PlayerSprites/crowbar/crowbar-(1).png" id="2_q50gb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5idhp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q50gb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5p6d"]
 
@@ -11,6 +21,7 @@ collision_layer = 3
 script = ExtResource("1_i5p6d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61910762]
+scale = Vector2(0.145, 0.145)
 sprite_frames = SubResource("SpriteFrames_5idhp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=307324724]

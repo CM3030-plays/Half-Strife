@@ -5,14 +5,19 @@ extends CharacterBody2D
 
 const playerWalkAngle = [45, -45]
 
-@export var currentWeapon = "crowbar"
+var weapons = ["crowbar", "revolver", "shotgun", "smg"]
+var heldWeapons = [0, 2, 3]
+var ammo = [100, 100, 100, 100]
+
+var max_ammo = 100
+
+@export var weaponIndex = 0
 var animation
 
 signal attack
 
 func _ready() -> void:
-	$PlayerSprite.play("crowbarIdle")
-	
+	$PlayerSprite.play(weapons[weaponIndex] + "Idle")
 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -26,6 +31,23 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
+	
+	if Input.is_action_just_pressed("weaponUp"):
+		print("switch")
+		if weaponIndex != heldWeapons.size() - 1:
+			weaponIndex += 1
+		else:
+			weaponIndex = 0 
+		$AttackCooldown.stop()
+		
+	if Input.is_action_just_pressed("weaponDown"):
+		if weaponIndex != 0:
+			weaponIndex -= 1
+		else:
+			weaponIndex = heldWeapons.size() - 1
+		$AttackCooldown.stop()
+	
+	var currentWeapon = weapons[heldWeapons[weaponIndex]]
 	
 	if Input.is_action_pressed("click") and $AttackCooldown.is_stopped():
 			animation = "Attack"
@@ -51,12 +73,9 @@ func _process(delta: float) -> void:
 				else:
 					# Otherwise → forward OR backward (sad animation)
 					animation = "Walk"
-	if $PlayerSprite.animation != str(currentWeapon) + animation:
-		$PlayerSprite.animation = str(currentWeapon) + animation
+	if $PlayerSprite.animation != currentWeapon + animation:
+		$PlayerSprite.animation = currentWeapon + animation
 		$PlayerSprite.play()
-	
-		
-
 
 func _on_attack_cooldown_timeout() -> void:
 	$AttackCooldown.stop()

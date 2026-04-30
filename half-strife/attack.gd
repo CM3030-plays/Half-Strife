@@ -19,7 +19,7 @@ func _on_body_exited(body: Node2D) -> void:
 func _on_player_attack(weapon : String) -> void:
 	print("attack")
 	if weapon == "crowbar":
-		$"../AttackCooldown".wait_time = 0.4
+		$"../AttackCooldown".start(0.4)
 		
 		if bodysMelee.size() > 0:
 			$"../Weapons".stream = AudioFiles.sfx["crowbar_hit"]
@@ -48,11 +48,11 @@ func _on_player_attack(weapon : String) -> void:
 		for body in bodysSides:
 			if body != null:
 				if body.has_method("takeDamage"):
-					body.takeDamage(30)
+					body.takeDamage(40)
 	
 	if weapon == "smg":
 		var bodysStraight = []
-		$"../AttackCooldown".start(0.4)
+		$"../AttackCooldown".start(0.5)
 		
 		bodysStraight.append($Straight.get_collider())
 		
@@ -61,6 +61,6 @@ func _on_player_attack(weapon : String) -> void:
 		for body in bodysStraight:
 			if body != null:
 				if body.has_method("takeDamage"):
-					body.takeDamage(30)
+					body.takeDamage(20)
 	
 	$"../Weapons".play()
