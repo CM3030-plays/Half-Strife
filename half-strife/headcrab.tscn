@@ -17,3 +17,9 @@ sprite_frames = SubResource("SpriteFrames_5idhp")
 shape = SubResource("CircleShape2D_i5p6d")
 
 [node name="sounds" type="AudioStreamPlayer2D" parent="." unique_id=1539645752]
+
+[node name="Idle" type="Timer" parent="." unique_id=786227002]
+wait_time = 6.487
+autostart = true
+
+[connection signal="timeout" from="Idle" to="." method="_on_idle_timeout"]

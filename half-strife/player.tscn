@@ -258,7 +258,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("41_dn2kn")
 }],
-"loop": true,
+"loop": false,
 "name": &"shotgunAttack",
 "speed": 12.0
 }, {
@@ -437,19 +437,17 @@ currentWeapon = "shotgun"
 position = Vector2(0, 3)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"smgAttack"
-frame_progress = 0.81773984
+animation = &"shotgunAttack"
+frame = 8
+frame_progress = 1.0
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
-visible = false
 shape = SubResource("CapsuleShape2D_nvl01")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
-visible = false
 zoom = Vector2(1.5, 1.5)
 
 [node name="Attack" type="Area2D" parent="." unique_id=1224267609]
-visible = false
 collision_mask = 2
 script = ExtResource("27_qtqh7")
 
@@ -475,11 +473,9 @@ target_position = Vector2(704, 32)
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1600107113]
-visible = false
 current = true
 
 [node name="Weapons" type="AudioStreamPlayer2D" parent="." unique_id=2007322071]
-visible = false
 
 [connection signal="attack" from="." to="Attack" method="_on_player_attack"]
 [connection signal="body_entered" from="Attack" to="Attack" method="_on_body_entered"]

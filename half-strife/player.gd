@@ -27,14 +27,10 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	
-	if currentWeapon == "crowbar":
-		$AttackCooldown.wait_time = 0.4
-	
-	if Input.is_action_pressed("click"):
-		animation = "Attack"
-		if $AttackCooldown.is_stopped():
-			$AttackCooldown.start()
+	if Input.is_action_pressed("click") and $AttackCooldown.is_stopped():
+			animation = "Attack"
 			attack.emit(currentWeapon)
+			$PlayerSprite.play()
 	else:
 		if $AttackCooldown.is_stopped():
 			if input_dir == Vector2.ZERO:
@@ -55,8 +51,10 @@ func _process(delta: float) -> void:
 				else:
 					# Otherwise → forward OR backward (sad animation)
 					animation = "Walk"
-
-	$PlayerSprite.animation = str(currentWeapon) + animation
+	if $PlayerSprite.animation != str(currentWeapon) + animation:
+		$PlayerSprite.animation = str(currentWeapon) + animation
+		$PlayerSprite.play()
+	
 		
 
 
