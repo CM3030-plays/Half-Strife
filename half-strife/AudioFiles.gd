@@ -3,6 +3,7 @@ extends Node
 var sfx = {
 	"crowbar_miss" : preload("res://assets/sfx/cbar_miss1.wav"), 
 	"crowbar_hit" : preload("res://assets/sfx/cbar_hitbod2.wav"),
+	"crowbar_hit_wall" : preload("res://assets/sfx/cbar_hit1.wav"),
 	
 	"revolver_fire" : [preload("res://assets/sfx/357_shot1.wav"), preload("res://assets/sfx/357_shot2.wav")],
 	

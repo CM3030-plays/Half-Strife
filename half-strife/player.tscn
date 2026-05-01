@@ -327,7 +327,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"shotgunAttack",
-"speed": 12.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -503,8 +503,7 @@ script = ExtResource("1_7hik5")
 position = Vector2(0, 3)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"revolverIdle"
-frame_progress = 0.60011613
+animation = &"shotgunAttack"
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
 shape = SubResource("CapsuleShape2D_nvl01")

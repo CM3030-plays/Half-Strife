@@ -7,6 +7,7 @@ var speed = 30
 func _ready() -> void:
 	add_to_group("enemies")
 	randomize()
+	$AnimatedSprite2D.play("Idle")
 
 func takeDamage(damage: int):
 	health -= damage
@@ -29,6 +30,10 @@ func takeDamage(damage: int):
 func die():
 	$CollisionShape2D.set_disabled(true)
 	dead = true
+	
+	$AnimatedSprite2D.animation = "Idle"
+	$AnimatedSprite2D.pause()
+	
 	await $sounds.finished
 	queue_free()
 
@@ -43,7 +48,9 @@ func _on_idle_timeout() -> void:
 func playerTrack(position):
 	if dead:
 		return
-
+	
+	$AnimatedSprite2D.animation = "Walk"
+	
 	look_at(position)
 
 	var direction = (position - global_position).normalized()

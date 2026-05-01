@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bni5vjcq6iebc" path="res://hud.tscn" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://bxskhdikoufha" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0crete2_flr5.png" id="1_kek77"]
-[ext_resource type="Script" uid="uid://bax02u8kcg5uk" path="res://main.gd" id="1_w48qg"]
+[ext_resource type="Script" path="res://main.gd" id="1_w48qg"]
 [ext_resource type="Texture2D" uid="uid://daj320dah6rm0" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f01.png" id="3_efxa6"]
 [ext_resource type="Texture2D" uid="uid://b6kcbf02yewas" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f02.png" id="4_dg77c"]
 [ext_resource type="Texture2D" uid="uid://cqrng1bhbvwvp" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f03b.png" id="5_ycdy4"]
@@ -128,7 +128,7 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_getpj"]
 tile_size = Vector2i(64, 64)
 occlusion_layer_0/light_mask = 1
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_2cqfq")
 sources/1 = SubResource("TileSetAtlasSource_yaehf")
 sources/2 = SubResource("TileSetAtlasSource_074og")

@@ -6,7 +6,7 @@ extends CharacterBody2D
 const playerWalkAngle = [45, -45]
 
 var weapons = ["crowbar", "revolver", "shotgun", "smg"]
-var heldWeapons = [0, 2, 3]
+var heldWeapons = [0, 1, 2, 3]
 var ammo = [100, 100, 100, 100]
 
 var max_ammo = 100
@@ -33,7 +33,6 @@ func _process(delta: float) -> void:
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	
 	if Input.is_action_just_pressed("weaponUp"):
-		print("switch")
 		if weaponIndex != heldWeapons.size() - 1:
 			weaponIndex += 1
 		else:
