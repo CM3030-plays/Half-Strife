@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc52affehpfox"
-path="res://.godot/imported/revolver-(3).png-b5db9f95b3c365abdaff0afa80fe063c.ctex"
+uid="uid://bjawgv2hros4p"
+path="res://.godot/imported/hcIdle-(3).png-6e433455f3de90b24001f1d2b1f4a4f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerSprites/revolver/revolver-(3).png"
-dest_files=["res://.godot/imported/revolver-(3).png-b5db9f95b3c365abdaff0afa80fe063c.ctex"]
+source_file="res://assets/EnemySprites/Headcrab/hcIdle-(3).png"
+dest_files=["res://.godot/imported/hcIdle-(3).png-6e433455f3de90b24001f1d2b1f4a4f6.ctex"]
 
 [params]
 

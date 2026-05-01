@@ -22,27 +22,43 @@
 [ext_resource type="Texture2D" uid="uid://choagyin60taq" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(7).png" id="13_khis8"]
 [ext_resource type="Texture2D" uid="uid://bpogqnjc05ja2" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(8).png" id="14_b88wv"]
 [ext_resource type="Texture2D" uid="uid://duqc4dkt7f6yq" path="res://assets/PlayerSprites/crowbar/crowbarSidestep-(9).png" id="15_pgbbb"]
-[ext_resource type="Texture2D" uid="uid://dfqamj3tomfl3" path="res://assets/PlayerSprites/revolver/revolver-(1).png" id="22_331ug"]
-[ext_resource type="Texture2D" uid="uid://2hdx0p06jc2k" path="res://assets/PlayerSprites/revolver/revolver-(2).png" id="23_ny14h"]
-[ext_resource type="Texture2D" uid="uid://cc52affehpfox" path="res://assets/PlayerSprites/revolver/revolver-(3).png" id="24_ibah8"]
-[ext_resource type="Texture2D" uid="uid://ddqa07a8b8vlf" path="res://assets/PlayerSprites/revolver/revolver-(4).png" id="25_3iwfv"]
-[ext_resource type="Texture2D" uid="uid://c2m08gn8fnvw5" path="res://assets/PlayerSprites/revolver/revolverForward-(1).png" id="27_0jj5r"]
+[ext_resource type="Texture2D" uid="uid://ckj3a3og80ey0" path="res://assets/PlayerSprites/revolver/revolverFire-(1).png" id="23_gpvxe"]
+[ext_resource type="Texture2D" uid="uid://ojus24idnvwn" path="res://assets/PlayerSprites/revolver/revolverFire-(2).png" id="24_qicb8"]
+[ext_resource type="Texture2D" uid="uid://dhq0xv7gfvutq" path="res://assets/PlayerSprites/revolver/revolverFire-(3).png" id="25_6o2m3"]
+[ext_resource type="Texture2D" uid="uid://dae366j038iwq" path="res://assets/PlayerSprites/revolver/revolverFire-(4).png" id="26_2hmo1"]
+[ext_resource type="Texture2D" uid="uid://duruaqmwjjo12" path="res://assets/PlayerSprites/revolver/revolverForward-(1).png" id="27_0jj5r"]
 [ext_resource type="Script" uid="uid://ccy4djv7v5pup" path="res://attack.gd" id="27_qtqh7"]
-[ext_resource type="Texture2D" uid="uid://r7tk04qys3o0" path="res://assets/PlayerSprites/revolver/revolverForward-(2).png" id="28_77e46"]
-[ext_resource type="Texture2D" uid="uid://i7nmoywiafv8" path="res://assets/PlayerSprites/revolver/revolverForward-(3).png" id="29_cy2ki"]
-[ext_resource type="Texture2D" uid="uid://8ra13bposcyx" path="res://assets/PlayerSprites/revolver/revolverForward-(4).png" id="30_04cqw"]
-[ext_resource type="Texture2D" uid="uid://0x4xgqgdmcd7" path="res://assets/PlayerSprites/revolver/revolverForward-(5).png" id="31_vihdy"]
-[ext_resource type="Texture2D" uid="uid://dac3m36pulcat" path="res://assets/PlayerSprites/revolver/revolverForward-(6).png" id="32_7c55y"]
+[ext_resource type="Texture2D" uid="uid://x7aqh5st2dlp" path="res://assets/PlayerSprites/revolver/revolverFire-(5).png" id="27_uygay"]
+[ext_resource type="Texture2D" uid="uid://debmxp82hvl7b" path="res://assets/PlayerSprites/revolver/revolverForward-(2).png" id="28_77e46"]
+[ext_resource type="Texture2D" uid="uid://du43d770r3hg6" path="res://assets/PlayerSprites/revolver/revolverFire-(6).png" id="28_rpay4"]
+[ext_resource type="Texture2D" uid="uid://cw63yn0ac03ff" path="res://assets/PlayerSprites/revolver/revolverForward-(3).png" id="29_cy2ki"]
+[ext_resource type="Texture2D" uid="uid://y1vcy6eaivom" path="res://assets/PlayerSprites/revolver/revolverFire-(7).png" id="29_xfa3h"]
+[ext_resource type="Texture2D" uid="uid://tj3t3s2lvdbt" path="res://assets/PlayerSprites/revolver/revolverForward-(4).png" id="30_04cqw"]
+[ext_resource type="Texture2D" uid="uid://dothap44cfiw" path="res://assets/PlayerSprites/revolver/revolverFire-(8).png" id="30_04g4e"]
+[ext_resource type="Texture2D" uid="uid://g0k02nwcit58" path="res://assets/PlayerSprites/revolver/revolverFire-(9).png" id="31_lx1qc"]
+[ext_resource type="Texture2D" uid="uid://b8nvgorf4pli3" path="res://assets/PlayerSprites/revolver/revolverForward-(5).png" id="31_vihdy"]
+[ext_resource type="Texture2D" uid="uid://dd0bcnl151xi3" path="res://assets/PlayerSprites/revolver/revolverForward-(6).png" id="32_7c55y"]
+[ext_resource type="Texture2D" uid="uid://cjrgo7krql121" path="res://assets/PlayerSprites/revolver/revolverFire-(10).png" id="32_elm0x"]
 [ext_resource type="Texture2D" uid="uid://dovq4t4awr12n" path="res://assets/PlayerSprites/shotgun/shotgunFire-(1).png" id="33_hoal8"]
+[ext_resource type="Texture2D" uid="uid://0f11a6fdnsif" path="res://assets/PlayerSprites/revolver/revolverFire-(11).png" id="33_k7vj2"]
+[ext_resource type="Texture2D" uid="uid://b2cys5wwrh38u" path="res://assets/PlayerSprites/revolver/revolverFire-(12).png" id="34_dtw5u"]
 [ext_resource type="Texture2D" uid="uid://cgyumwi6xqli7" path="res://assets/PlayerSprites/shotgun/shotgunFire-(2).png" id="34_htija"]
+[ext_resource type="Texture2D" uid="uid://dkmy66pvo3ecy" path="res://assets/PlayerSprites/revolver/revolverLeft-(1).png" id="35_f37gn"]
 [ext_resource type="Texture2D" uid="uid://b5d7ynjakscqm" path="res://assets/PlayerSprites/shotgun/shotgunFire-(3).png" id="35_he65s"]
 [ext_resource type="Texture2D" uid="uid://dfht8tob11tx8" path="res://assets/PlayerSprites/shotgun/shotgunFire-(4).png" id="36_c0yt3"]
+[ext_resource type="Texture2D" uid="uid://bitk4x2fhsag8" path="res://assets/PlayerSprites/revolver/revolverLeft-(2).png" id="36_jccjf"]
+[ext_resource type="Texture2D" uid="uid://daux0m0f00vx8" path="res://assets/PlayerSprites/revolver/revolverLeft-(3).png" id="37_qhi2v"]
 [ext_resource type="Texture2D" uid="uid://fkqspubpeiyc" path="res://assets/PlayerSprites/shotgun/shotgunFire-(5).png" id="37_uckl6"]
 [ext_resource type="Texture2D" uid="uid://datn6tat5lyuh" path="res://assets/PlayerSprites/shotgun/shotgunFire-(6).png" id="38_5ihbc"]
+[ext_resource type="Texture2D" uid="uid://yaxu7gi8aql2" path="res://assets/PlayerSprites/revolver/revolverLeft-(4).png" id="38_ipvpa"]
+[ext_resource type="Texture2D" uid="uid://ck2td0hhxmdso" path="res://assets/PlayerSprites/revolver/revolverRight-(1).png" id="39_nevyh"]
 [ext_resource type="Texture2D" uid="uid://bf1dhttbi4xbt" path="res://assets/PlayerSprites/shotgun/shotgunFire-(7).png" id="39_sc53x"]
+[ext_resource type="Texture2D" uid="uid://drjgs2fat7i8g" path="res://assets/PlayerSprites/revolver/revolverRight-(2).png" id="40_hhr50"]
 [ext_resource type="Texture2D" uid="uid://b001j3kqcsjpu" path="res://assets/PlayerSprites/shotgun/shotgunFire-(8).png" id="40_ro7of"]
+[ext_resource type="Texture2D" uid="uid://dktrr3eer2nvq" path="res://assets/PlayerSprites/revolver/revolverRight-(3).png" id="41_8u4el"]
 [ext_resource type="Texture2D" uid="uid://droc27p0h2c3q" path="res://assets/PlayerSprites/shotgun/shotgunFire-(9).png" id="41_dn2kn"]
 [ext_resource type="Texture2D" uid="uid://by1ceafpc28s5" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(1).png" id="42_4tmhn"]
+[ext_resource type="Texture2D" uid="uid://cif2mqhbhtfnv" path="res://assets/PlayerSprites/revolver/revolverRight-(4).png" id="42_a5i73"]
 [ext_resource type="Texture2D" uid="uid://j8xnhwmia8k2" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(2).png" id="43_gpvxe"]
 [ext_resource type="Texture2D" uid="uid://rfct7b5pjkau" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(3).png" id="44_qicb8"]
 [ext_resource type="Texture2D" uid="uid://dgy04igrjigen" path="res://assets/PlayerSprites/shotgun/shotgunLeft-(4).png" id="45_6o2m3"]
@@ -177,35 +193,86 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("22_331ug")
+"texture": ExtResource("23_gpvxe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_ny14h")
+"texture": ExtResource("24_qicb8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_ibah8")
+"texture": ExtResource("25_6o2m3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_3iwfv")
+"texture": ExtResource("26_2hmo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_uygay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rpay4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xfa3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_04g4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_lx1qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_elm0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_k7vj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_dtw5u")
 }],
 "loop": true,
 "name": &"revolverAttack",
 "speed": 12.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_qicb8")
+}],
 "loop": true,
 "name": &"revolverIdle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_f37gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_jccjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_qhi2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ipvpa")
+}],
 "loop": true,
 "name": &"revolverLeft",
-"speed": 12.0
+"speed": 11.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_nevyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hhr50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_8u4el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_a5i73")
+}],
 "loop": true,
 "name": &"revolverRight",
-"speed": 5.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -258,7 +325,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("41_dn2kn")
 }],
-"loop": false,
+"loop": true,
 "name": &"shotgunAttack",
 "speed": 12.0
 }, {
@@ -437,9 +504,8 @@ currentWeapon = "shotgun"
 position = Vector2(0, 3)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"shotgunAttack"
-frame = 8
-frame_progress = 1.0
+animation = &"revolverIdle"
+frame_progress = 0.60011613
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
 shape = SubResource("CapsuleShape2D_nvl01")
