@@ -11,3 +11,5 @@ func _process(delta: float) -> void:
 	for body in get_children():
 		if body.is_in_group("enemies") and body.position:
 			body.playerTrack($Player.position)
+	
+	print(Engine.get_frames_per_second())

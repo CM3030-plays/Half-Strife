@@ -126,14 +126,14 @@ collision_layer = 3
 script = ExtResource("1_i5p6d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61910762]
-position = Vector2(5, 1.0000001)
-scale = Vector2(0.145, 0.145)
+scale = Vector2(0.205, 0.205)
 sprite_frames = SubResource("SpriteFrames_5idhp")
 animation = &"Idle"
 frame_progress = 0.120676674
+offset = Vector2(34.146343, 4.878049)
 
 [node name="HeadcrabHitbox" type="CollisionShape2D" parent="." unique_id=307324724]
-scale = Vector2(0.66, 0.66)
+scale = Vector2(0.865, 0.865)
 shape = SubResource("CircleShape2D_i5p6d")
 
 [node name="sounds" type="AudioStreamPlayer2D" parent="." unique_id=1539645752]

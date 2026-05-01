@@ -500,13 +500,14 @@ motion_mode = 1
 script = ExtResource("1_7hik5")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=2032355288]
-position = Vector2(0, 3)
+position = Vector2(-0.625, -0.75)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"shotgunAttack"
+animation = &"smgIdle"
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331 groups=["player"]]
 z_index = 1
+position = Vector2(-0.625, -3.75)
 shape = SubResource("CapsuleShape2D_nvl01")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
@@ -521,18 +522,23 @@ position = Vector2(26, 0)
 shape = SubResource("RectangleShape2D_7hik5")
 
 [node name="Straight" type="RayCast2D" parent="Attack" unique_id=1225003553]
+position = Vector2(25.47, 0)
 target_position = Vector2(704, 0)
 
 [node name="Spread1" type="RayCast2D" parent="Attack" unique_id=358862010]
+position = Vector2(25.47, 0)
 target_position = Vector2(704, 64)
 
 [node name="Spread2" type="RayCast2D" parent="Attack" unique_id=683377724]
+position = Vector2(25.47, 0)
 target_position = Vector2(704, -64)
 
 [node name="Spread3" type="RayCast2D" parent="Attack" unique_id=246795360]
+position = Vector2(25.47, 0)
 target_position = Vector2(704, -32)
 
 [node name="Spread4" type="RayCast2D" parent="Attack" unique_id=1509635740]
+position = Vector2(25.47, 0)
 target_position = Vector2(704, 32)
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]

@@ -54,7 +54,7 @@ func _on_player_attack(weapon : String) -> void:
 	
 	if weapon == "smg":
 		var bodysStraight = []
-		$"../AttackCooldown".start(0.1)
+		$"../AttackCooldown".start(0.075)
 		
 		bodysStraight.append($Straight.get_collider())
 		
@@ -63,7 +63,7 @@ func _on_player_attack(weapon : String) -> void:
 		for body in bodysStraight:
 			if body != null:
 				if body.has_method("takeDamage"):
-					body.takeDamage(20)
+					body.takeDamage(40)
 	
 	if weapon == "revolver":
 		var bodysStraight = []
