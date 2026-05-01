@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfqamj3tomfl3"
-path="res://.godot/imported/revolver-(1).png-dc7b7552fa66fee49da6fad710abd791.ctex"
+uid="uid://bul2yj2kx2bo2"
+path="res://.godot/imported/hcWalk-(9).png-84d15cf1ceabd1be51d8cd87d8913b2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerSprites/revolver/revolver-(1).png"
-dest_files=["res://.godot/imported/revolver-(1).png-dc7b7552fa66fee49da6fad710abd791.ctex"]
+source_file="res://assets/EnemySprites/Headcrab/hcWalk-(9).png"
+dest_files=["res://.godot/imported/hcWalk-(9).png-84d15cf1ceabd1be51d8cd87d8913b2c.ctex"]
 
 [params]
 
