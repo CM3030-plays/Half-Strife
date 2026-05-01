@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bni5vjcq6iebc" path="res://hud.tscn" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://bxskhdikoufha" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0crete2_flr5.png" id="1_kek77"]
-[ext_resource type="Script" path="res://main.gd" id="1_w48qg"]
+[ext_resource type="Script" uid="uid://bax02u8kcg5uk" path="res://main.gd" id="1_w48qg"]
 [ext_resource type="Texture2D" uid="uid://daj320dah6rm0" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f01.png" id="3_efxa6"]
 [ext_resource type="Texture2D" uid="uid://b6kcbf02yewas" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f02.png" id="4_dg77c"]
 [ext_resource type="Texture2D" uid="uid://cqrng1bhbvwvp" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f03b.png" id="5_ycdy4"]
@@ -146,7 +146,7 @@ tile_set = SubResource("TileSet_xuqvo")
 collision_enabled = false
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=272774111]
-z_index = 1
+z_index = 2
 scale = Vector2(0.75, 0.75)
 tile_map_data = PackedByteArray("AAAFAAUAAwAAAAAAAAAGAAUAAwABAAAAAAAHAAUAAwAAAAAAAAAIAAUAAwABAAAAAAAJAAUAAwAAAAAAAAAKAAUAAwABAAAAAAALAAUAAwAAAAAAAAAMAAUAAwABAAAAAAAFAAYAAwAAAAEAAAAGAAYAAwABAAEAAAAFAAcAAwAAAAEAAAAGAAcAAwABAAEAAAAHAAYAAwAAAAEAAAAIAAYAAwABAAEAAAAHAAcAAwAAAAEAAAAIAAcAAwABAAEAAAAJAAYAAwAAAAEAAAAKAAYAAwABAAEAAAAJAAcAAwAAAAEAAAAKAAcAAwABAAEAAAALAAYAAwAAAAEAAAAMAAYAAwABAAEAAAALAAcAAwAAAAEAAAAMAAcAAwABAAEAAAAFAAIAAwABAAAAADAFAAEAAwABAAEAADAGAAIAAwAAAAAAADAGAAEAAwAAAAEAADAHAAIAAwABAAAAADAHAAEAAwABAAEAADAIAAIAAwAAAAAAADAIAAEAAwAAAAEAADAJAAIAAwABAAAAADAJAAEAAwABAAEAADAKAAIAAwAAAAAAADAKAAEAAwAAAAEAADALAAIAAwABAAAAADALAAEAAwABAAEAADAMAAIAAwAAAAAAADAMAAEAAwAAAAEAADA=")
 tile_set = SubResource("TileSet_getpj")
@@ -155,31 +155,4 @@ tile_set = SubResource("TileSet_getpj")
 position = Vector2(246, 187)
 
 [node name="Headcrab" parent="." unique_id=2052064186 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(369, 191)
-
-[node name="Headcrab2" parent="." unique_id=1944296124 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(500, 194)
-
-[node name="Headcrab3" parent="." unique_id=327774202 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(467, 178)
-
-[node name="Headcrab4" parent="." unique_id=454138070 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(460, 202)
-
-[node name="Headcrab5" parent="." unique_id=1942581412 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(419, 186)
-
-[node name="Headcrab6" parent="." unique_id=1891195853 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(420, 212)
-
-[node name="Headcrab7" parent="." unique_id=1507871831 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(392, 219)
-
-[node name="Headcrab8" parent="." unique_id=358559657 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(359, 222)
-
-[node name="Headcrab9" parent="." unique_id=1407529587 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(340, 168)
-
-[node name="Headcrab10" parent="." unique_id=2027696428 groups=["enemies"] instance=ExtResource("13_ycdy4")]
-position = Vector2(378, 163)
+position = Vector2(793, 200)

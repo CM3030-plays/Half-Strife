@@ -495,7 +495,7 @@ height = 40.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hik5"]
 size = Vector2(50, 50)
 
-[node name="Player" type="CharacterBody2D" unique_id=645128869]
+[node name="Player" type="CharacterBody2D" unique_id=645128869 groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_7hik5")
 
@@ -505,7 +505,8 @@ scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
 animation = &"shotgunAttack"
 
-[node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331]
+[node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331 groups=["player"]]
+z_index = 1
 shape = SubResource("CapsuleShape2D_nvl01")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]

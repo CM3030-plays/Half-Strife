@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bul2yj2kx2bo2" path="res://assets/EnemySprites/Headcrab/hcWalk-(9).png" id="24_hka8j"]
 [ext_resource type="Texture2D" uid="uid://b0j0tbvqujn2h" path="res://assets/EnemySprites/Headcrab/hcWalk-(10).png" id="25_xsayp"]
 [ext_resource type="Texture2D" uid="uid://10w73g6nxmv1" path="res://assets/EnemySprites/Headcrab/hcWalk-(11).png" id="26_j4xkg"]
+[ext_resource type="Script" uid="uid://bv46nubfyrvmb" path="res://idle.gd" id="27_dcngs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5idhp"]
 animations = [{
@@ -117,6 +118,9 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5p6d"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8irv4"]
+radius = 168.19037
+
 [node name="Headcrab" type="CharacterBody2D" unique_id=1944296124]
 collision_layer = 3
 script = ExtResource("1_i5p6d")
@@ -128,7 +132,7 @@ sprite_frames = SubResource("SpriteFrames_5idhp")
 animation = &"Idle"
 frame_progress = 0.120676674
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=307324724]
+[node name="HeadcrabHitbox" type="CollisionShape2D" parent="." unique_id=307324724]
 scale = Vector2(0.66, 0.66)
 shape = SubResource("CircleShape2D_i5p6d")
 
@@ -137,5 +141,14 @@ shape = SubResource("CircleShape2D_i5p6d")
 [node name="Idle" type="Timer" parent="." unique_id=786227002]
 wait_time = 6.487
 autostart = true
+script = ExtResource("27_dcngs")
+
+[node name="DetectRange" type="Area2D" parent="." unique_id=124840839]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRange" unique_id=251738238]
+shape = SubResource("CircleShape2D_8irv4")
 
 [connection signal="timeout" from="Idle" to="." method="_on_idle_timeout"]
+[connection signal="body_entered" from="DetectRange" to="." method="_on_detect_range_body_entered"]
