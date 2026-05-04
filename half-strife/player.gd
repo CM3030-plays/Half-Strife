@@ -78,3 +78,7 @@ func _process(delta: float) -> void:
 
 func _on_attack_cooldown_timeout() -> void:
 	$AttackCooldown.stop()
+
+
+func _on_flash_timer_timeout() -> void:
+	$Attack/Flash.hide()

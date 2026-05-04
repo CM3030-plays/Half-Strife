@@ -490,10 +490,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nvl01"]
-height = 40.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hik5"]
 size = Vector2(50, 50)
+
+[sub_resource type="Gradient" id="Gradient_gpvxe"]
+colors = PackedColorArray(0.98348135, 0.98939055, 0.5671121, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qicb8"]
+gradient = SubResource("Gradient_gpvxe")
+fill = 1
+fill_from = Vector2(0.51282054, 0.52991456)
+fill_to = Vector2(0.82051283, 0.2008547)
 
 [node name="Player" type="CharacterBody2D" unique_id=645128869 groups=["player"]]
 motion_mode = 1
@@ -503,11 +511,11 @@ script = ExtResource("1_7hik5")
 position = Vector2(-0.625, -0.75)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"smgIdle"
+animation = &"revolverAttack"
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=66626331 groups=["player"]]
 z_index = 1
-position = Vector2(-0.625, -3.75)
+position = Vector2(-4, -1)
 shape = SubResource("CapsuleShape2D_nvl01")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
@@ -522,24 +530,35 @@ position = Vector2(26, 0)
 shape = SubResource("RectangleShape2D_7hik5")
 
 [node name="Straight" type="RayCast2D" parent="Attack" unique_id=1225003553]
-position = Vector2(25.47, 0)
-target_position = Vector2(704, 0)
+position = Vector2(6, 0)
+target_position = Vector2(818.18, 0)
 
 [node name="Spread1" type="RayCast2D" parent="Attack" unique_id=358862010]
-position = Vector2(25.47, 0)
+position = Vector2(6, 0)
 target_position = Vector2(704, 64)
 
 [node name="Spread2" type="RayCast2D" parent="Attack" unique_id=683377724]
-position = Vector2(25.47, 0)
+position = Vector2(6, 0)
 target_position = Vector2(704, -64)
 
 [node name="Spread3" type="RayCast2D" parent="Attack" unique_id=246795360]
-position = Vector2(25.47, 0)
+position = Vector2(6, 0)
 target_position = Vector2(704, -32)
 
 [node name="Spread4" type="RayCast2D" parent="Attack" unique_id=1509635740]
-position = Vector2(25.47, 0)
+position = Vector2(6, 0)
 target_position = Vector2(704, 32)
+
+[node name="Flash" type="PointLight2D" parent="Attack" unique_id=583736107]
+position = Vector2(2.000001, 1.9073486e-06)
+scale = Vector2(12.21875, 11.228043)
+energy = 1.12
+shadow_enabled = true
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_qicb8")
+
+[node name="FlashTimer" type="Timer" parent="Attack" unique_id=1068948457]
+wait_time = 0.05
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
 
@@ -552,4 +571,5 @@ current = true
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="body_entered" from="Attack" to="Attack" method="_on_body_entered"]
 [connection signal="body_exited" from="Attack" to="Attack" method="_on_body_exited"]
+[connection signal="timeout" from="Attack/FlashTimer" to="." method="_on_flash_timer_timeout"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]

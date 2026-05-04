@@ -47,6 +47,9 @@ func _on_player_attack(weapon : String) -> void:
 		
 		$"../Weapons".stream = AudioFiles.sfx["shotgun_fire"]
 		
+		$Flash.show()
+		$FlashTimer.start()
+		
 		for body in bodysSides:
 			if body != null:
 				if body.has_method("takeDamage"):
@@ -60,6 +63,9 @@ func _on_player_attack(weapon : String) -> void:
 		
 		$"../Weapons".stream = AudioFiles.sfx["smg_fire"].pick_random()
 		
+		$Flash.show()
+		$FlashTimer.start()
+		
 		for body in bodysStraight:
 			if body != null:
 				if body.has_method("takeDamage"):
@@ -72,6 +78,9 @@ func _on_player_attack(weapon : String) -> void:
 		bodysStraight.append($Straight.get_collider())
 		
 		$"../Weapons".stream = AudioFiles.sfx["revolver_fire"].pick_random()
+		
+		$Flash.show()
+		$FlashTimer.start()
 		
 		for body in bodysStraight:
 			if body != null:
