@@ -2,13 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://bni5vjcq6iebc" path="res://hud.tscn" id="1_5vw27"]
 [ext_resource type="Script" uid="uid://bax02u8kcg5uk" path="res://main.gd" id="1_w48qg"]
-[ext_resource type="PackedScene" uid="uid://dngw32k8vxx2s" path="res://Levels/level_debug.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://b3h5rjwlwgmww" path="res://player.tscn" id="7_272bh"]
 
 [node name="Node2D" type="Node2D" unique_id=958836224]
 script = ExtResource("1_w48qg")
 
-[node name="Level" parent="." unique_id=657810730 instance=ExtResource("2_1bvp3")]
+[node name="Level" type="Node" parent="." unique_id=455762634]
 
 [node name="Hud" parent="." unique_id=1323355103 instance=ExtResource("1_5vw27")]
 

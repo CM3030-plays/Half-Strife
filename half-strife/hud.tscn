@@ -55,7 +55,10 @@ blend_mode = 1
 height = 0.07
 
 [node name="music" type="AudioStreamPlayer2D" parent="." unique_id=1500961781]
-position = Vector2(0, 601)
-volume_db = 5.824
+position = Vector2(577, 324)
+
+[node name="HEV" type="AudioStreamPlayer2D" parent="." unique_id=1863543020]
+position = Vector2(577, 323.99997)
+scale = Vector2(1, 0.99999994)
 
 [connection signal="finished" from="music" to="." method="_on_music_finished"]

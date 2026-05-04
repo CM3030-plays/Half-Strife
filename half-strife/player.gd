@@ -95,8 +95,8 @@ func check_damage():
 				if health <= 0:
 					health = 0
 				
-				set_collision_layer_value(1, false)
-				set_collision_mask_value(1, false)
+				#set_collision_layer_value(1, false)
+				#set_collision_mask_value(1, false)
 				hittable = false
 				$DamageCooldown.start()
 				return

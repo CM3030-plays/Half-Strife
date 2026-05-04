@@ -1,6 +1,7 @@
 extends Node
 
 var sfx = {
+	"HEV_Intro" : preload("res://assets/sfx/hev_logon.wav"),
 	"crowbar_miss" : preload("res://assets/sfx/cbar_miss1.wav"), 
 	"crowbar_hit" : preload("res://assets/sfx/cbar_hitbod2.wav"),
 	"crowbar_hit_wall" : preload("res://assets/sfx/cbar_hit1.wav"),

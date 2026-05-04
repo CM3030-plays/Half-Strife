@@ -8,6 +8,9 @@ func _ready() -> void:
 	last_song = AudioFiles.music.pick_random()
 	$music.stream = last_song
 	$music.play()
+	
+	$HEV.stream = AudioFiles.sfx["HEV_Intro"]
+	$HEV.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
