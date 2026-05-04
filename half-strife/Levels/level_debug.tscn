@@ -126,6 +126,7 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_6oeuj")
 sources/1 = SubResource("TileSetAtlasSource_8cbvb")
 sources/2 = SubResource("TileSetAtlasSource_ron8g")
@@ -134,6 +135,7 @@ sources/3 = SubResource("TileSetAtlasSource_ifnyy")
 [node name="Level" type="Node2D" unique_id=657810730]
 
 [node name="StartPos" type="Marker2D" parent="." unique_id=1433827736]
+position = Vector2(213, 194)
 
 [node name="Floors" type="TileMapLayer" parent="." unique_id=1512678108]
 z_index = -1

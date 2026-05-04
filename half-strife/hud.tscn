@@ -25,7 +25,7 @@ script = ExtResource("1_64ctp")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_37p78")
 
-[node name="Label" type="Label" parent="." unique_id=752061176]
+[node name="Health" type="Label" parent="." unique_id=752061176]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -53,3 +53,9 @@ scale = Vector2(11.22807, 11.999999)
 energy = 0.96
 blend_mode = 1
 height = 0.07
+
+[node name="music" type="AudioStreamPlayer2D" parent="." unique_id=1500961781]
+position = Vector2(0, 601)
+volume_db = 5.824
+
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

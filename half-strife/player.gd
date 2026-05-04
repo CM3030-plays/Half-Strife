@@ -5,6 +5,10 @@ extends CharacterBody2D
 
 const playerWalkAngle = [45, -45]
 
+var hittable = true
+
+var health = 100
+
 var weapons = ["crowbar", "revolver", "shotgun", "smg"]
 var heldWeapons = [0, 1, 2, 3]
 var ammo = [100, 100, 100, 100]
@@ -30,6 +34,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
+	check_damage()
+	
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	
 	if Input.is_action_just_pressed("weaponUp"):
@@ -76,9 +82,34 @@ func _process(delta: float) -> void:
 		$PlayerSprite.animation = currentWeapon + animation
 		$PlayerSprite.play()
 
+func check_damage():
+	if health <= 0:
+		health = 0
+	
+	
+	if hittable:
+		for i in range(get_slide_collision_count()):
+			var col = get_slide_collision(i)
+			if col.get_collider().is_in_group("enemies"):
+				health -= randi_range(8, 12)
+				if health <= 0:
+					health = 0
+				
+				set_collision_layer_value(1, false)
+				set_collision_mask_value(1, false)
+				hittable = false
+				$DamageCooldown.start()
+				return
+
 func _on_attack_cooldown_timeout() -> void:
 	$AttackCooldown.stop()
 
 
 func _on_flash_timer_timeout() -> void:
 	$Attack/Flash.hide()
+
+
+func _on_damage_cooldown_timeout() -> void:
+	hittable = true
+	set_collision_layer_value(1, true)
+	set_collision_mask_value(1, true)

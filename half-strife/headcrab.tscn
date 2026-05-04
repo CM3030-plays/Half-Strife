@@ -144,8 +144,8 @@ autostart = true
 script = ExtResource("27_dcngs")
 
 [node name="DetectRange" type="Area2D" parent="." unique_id=124840839]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRange" unique_id=251738238]
 shape = SubResource("CircleShape2D_8irv4")

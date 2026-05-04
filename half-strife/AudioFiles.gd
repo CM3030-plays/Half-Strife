@@ -18,3 +18,9 @@ var sfx = {
 	"hc_die" : [preload("res://assets/sfx/hc_die1.wav"), preload("res://assets/sfx/hc_die2.wav")],
 	"hc_idle" : [preload("res://assets/sfx/hc_idle1.wav"), preload("res://assets/sfx/hc_idle2.wav"), preload("res://assets/sfx/hc_idle3.wav"), preload("res://assets/sfx/hc_idle4.wav"), preload("res://assets/sfx/hc_idle5.wav")]
 	}
+var music = [
+preload("res://assets/music/half-life (1).mp3"),
+preload("res://assets/music/half-life (2).mp3"),
+preload("res://assets/music/half-life (3).mp3"),
+preload("res://assets/music/half-life (4).mp3")
+]

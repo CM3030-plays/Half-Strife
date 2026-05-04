@@ -504,6 +504,7 @@ fill_from = Vector2(0.51282054, 0.52991456)
 fill_to = Vector2(0.82051283, 0.2008547)
 
 [node name="Player" type="CharacterBody2D" unique_id=645128869 groups=["player"]]
+collision_layer = 3
 motion_mode = 1
 script = ExtResource("1_7hik5")
 
@@ -550,6 +551,7 @@ position = Vector2(6, 0)
 target_position = Vector2(704, 32)
 
 [node name="Flash" type="PointLight2D" parent="Attack" unique_id=583736107]
+visible = false
 position = Vector2(2.000001, 1.9073486e-06)
 scale = Vector2(12.21875, 11.228043)
 energy = 1.12
@@ -567,9 +569,12 @@ current = true
 
 [node name="Weapons" type="AudioStreamPlayer2D" parent="." unique_id=2007322071]
 
+[node name="DamageCooldown" type="Timer" parent="." unique_id=1185803211]
+
 [connection signal="attack" from="." to="Attack" method="_on_player_attack"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="body_entered" from="Attack" to="Attack" method="_on_body_entered"]
 [connection signal="body_exited" from="Attack" to="Attack" method="_on_body_exited"]
 [connection signal="timeout" from="Attack/FlashTimer" to="." method="_on_flash_timer_timeout"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="DamageCooldown" to="." method="_on_damage_cooldown_timeout"]
