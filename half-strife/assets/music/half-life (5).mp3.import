@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://su4nukohg43g"
+path="res://.godot/imported/half-life (5).mp3-df3a432d2d88ae73505ff95b3baa5056.mp3str"
+
+[deps]
+
+source_file="res://assets/music/half-life (5).mp3"
+dest_files=["res://.godot/imported/half-life (5).mp3-df3a432d2d88ae73505ff95b3baa5056.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

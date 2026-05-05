@@ -19,6 +19,7 @@ var max_ammo = 100
 var animation
 
 signal attack
+signal hit
 
 func _ready() -> void:
 	$PlayerSprite.play(weapons[weaponIndex] + "Idle")
@@ -86,19 +87,26 @@ func check_damage():
 	if health <= 0:
 		health = 0
 	
-	
 	if hittable:
 		for i in range(get_slide_collision_count()):
 			var col = get_slide_collision(i)
-			if col.get_collider().is_in_group("enemies"):
+			var collider = col.get_collider()
+			
+			if collider.is_in_group("enemies"):
 				health -= randi_range(8, 12)
 				if health <= 0:
 					health = 0
 				
-				#set_collision_layer_value(1, false)
-				#set_collision_mask_value(1, false)
+				var direction = (global_position - collider.global_position).normalized()
+				var knockback_force = 800  # tweak this
+				velocity = direction * knockback_force
+				
+				set_collision_layer_value(1, false)
+				set_collision_mask_value(1, false)
 				hittable = false
+				
 				$DamageCooldown.start()
+				hit.emit()
 				return
 
 func _on_attack_cooldown_timeout() -> void:

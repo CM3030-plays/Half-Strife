@@ -505,6 +505,7 @@ fill_to = Vector2(0.82051283, 0.2008547)
 
 [node name="Player" type="CharacterBody2D" unique_id=645128869 groups=["player"]]
 collision_layer = 3
+collision_mask = 3
 collision_priority = 2.0
 motion_mode = 1
 script = ExtResource("1_7hik5")
@@ -524,7 +525,6 @@ shape = SubResource("CapsuleShape2D_nvl01")
 zoom = Vector2(1.5, 1.5)
 
 [node name="Attack" type="Area2D" parent="." unique_id=1224267609]
-collision_mask = 2
 script = ExtResource("27_qtqh7")
 
 [node name="MeleeCollision" type="CollisionShape2D" parent="Attack" unique_id=1815069996]
@@ -538,6 +538,8 @@ target_position = Vector2(818.18, 0)
 [node name="Spread1" type="RayCast2D" parent="Attack" unique_id=358862010]
 position = Vector2(6, 0)
 target_position = Vector2(816.215, 48)
+collision_mask = 2
+hit_from_inside = true
 
 [node name="Spread2" type="RayCast2D" parent="Attack" unique_id=683377724]
 position = Vector2(6, 0)

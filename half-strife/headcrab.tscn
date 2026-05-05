@@ -116,14 +116,14 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_i5p6d"]
-radius = 12.7167635
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcngs"]
+radius = 15.028902
+height = 39.30636
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8irv4"]
-radius = 168.19037
+radius = 309.00162
 
 [node name="Headcrab" type="CharacterBody2D" unique_id=1944296124]
-collision_layer = 3
 script = ExtResource("1_i5p6d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61910762]
@@ -134,8 +134,9 @@ frame_progress = 0.120676674
 offset = Vector2(34.146343, 4.878049)
 
 [node name="HeadcrabHitbox" type="CollisionShape2D" parent="." unique_id=307324724]
+rotation = 1.5707964
 scale = Vector2(0.865, 0.865)
-shape = SubResource("CircleShape2D_i5p6d")
+shape = SubResource("CapsuleShape2D_dcngs")
 
 [node name="sounds" type="AudioStreamPlayer2D" parent="." unique_id=1539645752]
 
@@ -150,6 +151,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRange" unique_id=251738238]
 shape = SubResource("CircleShape2D_8irv4")
+debug_color = Color(0, 0.5950001, 0.7, 0)
 
 [connection signal="timeout" from="Idle" to="." method="_on_idle_timeout"]
 [connection signal="body_entered" from="DetectRange" to="." method="_on_detect_range_body_entered"]

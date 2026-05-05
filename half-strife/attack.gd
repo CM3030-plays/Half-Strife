@@ -7,7 +7,7 @@ var bodysWall = []
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
 		bodysMelee.append(body)
-	else:
+	elif body.is_in_group("walls"):
 		bodysWall.append(body)
 
 
@@ -32,59 +32,56 @@ func _on_player_attack(weapon : String) -> void:
 		
 		for body in bodysMelee:
 			if body.has_method("takeDamage"):
-				body.takeDamage(50)
+				body.takeDamage(50, Vector2.ZERO)
 	
 	if weapon == "shotgun":
 		var bodysSides = []
 		
 		$"../AttackCooldown".start(9.0/11.0)
 		
-		bodysSides.append($Spread1.get_collider())
-		bodysSides.append($Spread2.get_collider())
-		bodysSides.append($Spread3.get_collider())
-		bodysSides.append($Spread4.get_collider())
-		bodysSides.append($Straight.get_collider())
+		var rays = [$Spread1, $Spread2, $Spread3, $Spread4, $Straight]
+
+		for ray in rays:
+			var body = ray.get_collider()
+			if body != null:
+				if body.has_method("takeDamage"):
+					var dir = ray.global_transform.x.normalized()
+					body.takeDamage(40, dir)
 		
 		$"../Weapons".stream = AudioFiles.sfx["shotgun_fire"]
 		
 		$Flash.show()
 		$FlashTimer.start()
 		
-		for body in bodysSides:
-			if body != null:
-				if body.has_method("takeDamage"):
-					body.takeDamage(40)
 	
 	if weapon == "smg":
-		var bodysStraight = []
 		$"../AttackCooldown".start(0.075)
 		
-		bodysStraight.append($Straight.get_collider())
+		var straight = $Straight.get_collider()
 		
 		$"../Weapons".stream = AudioFiles.sfx["smg_fire"].pick_random()
 		
 		$Flash.show()
 		$FlashTimer.start()
 		
-		for body in bodysStraight:
-			if body != null:
-				if body.has_method("takeDamage"):
-					body.takeDamage(40)
+		if straight != null:
+			if straight.has_method("takeDamage"):
+				var dir = straight.global_transform.x.normalized()
+				straight.takeDamage(40, dir)
 	
 	if weapon == "revolver":
-		var bodysStraight = []
 		$"../AttackCooldown".start(1)
 		
-		bodysStraight.append($Straight.get_collider())
+		var straight = $Straight.get_collider()
 		
 		$"../Weapons".stream = AudioFiles.sfx["revolver_fire"].pick_random()
 		
 		$Flash.show()
 		$FlashTimer.start()
 		
-		for body in bodysStraight:
-			if body != null:
-				if body.has_method("takeDamage"):
-					body.takeDamage(100)
+		if straight != null:
+			if straight.has_method("takeDamage"):
+				var dir = straight.global_transform.x.normalized()
+				straight.takeDamage(1000, dir)
 	
 	$"../Weapons".play()

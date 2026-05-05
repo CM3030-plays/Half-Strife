@@ -145,7 +145,7 @@ tile_map_data = PackedByteArray("AADx//H/AwAAAAAAAADx//L/AwAAAAAAAADx//P/AwAAAAA
 tile_set = SubResource("TileSet_wkhfe")
 collision_enabled = false
 
-[node name="Walls" type="TileMapLayer" parent="." unique_id=1485181587]
+[node name="Walls" type="TileMapLayer" parent="." unique_id=1485181587 groups=["walls"]]
 z_index = 2
 z_as_relative = false
 scale = Vector2(0.75, 0.75)

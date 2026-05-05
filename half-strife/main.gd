@@ -25,3 +25,7 @@ func loadLevel(path : String):
 	currentLevel = level_scene.instantiate()
 	
 	$Level.add_child(currentLevel)
+
+
+func _on_player_hit() -> void:
+	$Hud.hit($Player.health)

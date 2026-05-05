@@ -2,19 +2,24 @@ extends CharacterBody2D
 
 var health = 100
 var dead = false
-var speed = 30
+var speed = 65
 
 var playerFound = false
+var knockback = Vector2.ZERO
 
 func _ready() -> void:
 	add_to_group("enemies")
 	randomize()
 	$AnimatedSprite2D.play("Idle")
 	rotate(randf_range(0, 2*PI))
+	$Idle.start(randf_range(5, 30))
 
-func takeDamage(damage: int):
+func takeDamage(damage: int, dir : Vector2):
 	health -= damage
-
+	
+	var knockback_force = 200
+	knockback -= dir * knockback_force
+	
 	var sound_array
 
 	if health <= 0:
@@ -45,6 +50,7 @@ func _on_idle_timeout() -> void:
 	if dead:
 		return
 	
+	$Idle.start(randf_range(5, 60))
 	$sounds.stream = AudioFiles.sfx["hc_idle"].pick_random()
 	$sounds.play()
 
@@ -57,9 +63,11 @@ func playerTrack(position):
 	look_at(position)
 
 	var direction = (position - global_position).normalized()
-	velocity = direction * speed
+	var move_velocity = direction * speed
+	velocity = move_velocity + knockback
 
 	move_and_slide()
+	knockback = knockback.move_toward(Vector2.ZERO, 400 * get_physics_process_delta_time())
 
 func _on_detect_range_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

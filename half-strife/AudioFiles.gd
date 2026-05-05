@@ -1,7 +1,8 @@
 extends Node
 
 var sfx = {
-	"HEV_Intro" : preload("res://assets/sfx/hev_logon.wav"),
+	"hit" : preload("res://assets/sfx/buzz.wav"),
+	
 	"crowbar_miss" : preload("res://assets/sfx/cbar_miss1.wav"), 
 	"crowbar_hit" : preload("res://assets/sfx/cbar_hitbod2.wav"),
 	"crowbar_hit_wall" : preload("res://assets/sfx/cbar_hit1.wav"),
@@ -23,5 +24,14 @@ var music = [
 preload("res://assets/music/half-life (1).mp3"),
 preload("res://assets/music/half-life (2).mp3"),
 preload("res://assets/music/half-life (3).mp3"),
-preload("res://assets/music/half-life (4).mp3")
+preload("res://assets/music/half-life (4).mp3"),
+preload("res://assets/music/half-life (5).mp3"),
+preload("res://assets/music/half-life (6).mp3"),
+preload("res://assets/music/half-life (7).mp3"),
+preload("res://assets/music/half-life (8).mp3")
 ]
+
+var HEV = {
+	"HEV_Intro" : preload("res://assets/sfx/hev_logon.wav"),
+	"health_critical" : preload("res://assets/sfx/health_critical.wav")
+}
