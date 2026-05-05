@@ -15,3 +15,4 @@ script = ExtResource("1_w48qg")
 position = Vector2(246, 187)
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[connection signal="switch" from="Player" to="." method="_on_player_switch"]

@@ -153,79 +153,89 @@ scale = Vector2(0.75, 0.75)
 tile_map_data = PackedByteArray("AAAFAAUAAwAAAAAAAAAGAAUAAwABAAAAAAAHAAUAAwAAAAAAAAAIAAUAAwABAAAAAAAJAAUAAwAAAAAAAAAKAAUAAwABAAAAAAALAAUAAwAAAAAAAAAMAAUAAwABAAAAAAAFAAYAAwAAAAEAAAAGAAYAAwABAAEAAAAFAAcAAwAAAAEAAAAGAAcAAwABAAEAAAAHAAYAAwAAAAEAAAAIAAYAAwABAAEAAAAHAAcAAwAAAAEAAAAIAAcAAwABAAEAAAAJAAYAAwAAAAEAAAAKAAYAAwABAAEAAAAJAAcAAwAAAAEAAAAKAAcAAwABAAEAAAALAAYAAwAAAAEAAAAMAAYAAwABAAEAAAALAAcAAwAAAAEAAAAMAAcAAwABAAEAAAAFAAIAAwABAAAAADAFAAEAAwABAAEAADAGAAIAAwAAAAAAADAGAAEAAwAAAAEAADAHAAIAAwABAAAAADAHAAEAAwABAAEAADAIAAIAAwAAAAAAADAIAAEAAwAAAAEAADAJAAIAAwABAAAAADAJAAEAAwABAAEAADAKAAIAAwAAAAAAADAKAAEAAwAAAAEAADALAAIAAwABAAAAADALAAEAAwABAAEAADAMAAIAAwAAAAAAADAMAAEAAwAAAAEAADA=")
 tile_set = SubResource("TileSet_j7m8r")
 
-[node name="Headcrab" parent="." unique_id=1944296124 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="shotgunAm" parent="." unique_id=1854567498 instance=ExtResource("12_854xt")]
+ammoType = 1
+
+[node name="revolverAm" parent="." unique_id=1079871397 instance=ExtResource("12_854xt")]
+position = Vector2(78, -3)
+
+[node name="smgAM" parent="." unique_id=1254816201 instance=ExtResource("12_854xt")]
+position = Vector2(146, 0)
+ammoType = 2
+
+[node name="Enemies" type="Node" parent="." unique_id=507242035]
+
+[node name="Headcrab" parent="Enemies" unique_id=1944296124 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(793, 200)
 
-[node name="Headcrab2" parent="." unique_id=1910697705 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab2" parent="Enemies" unique_id=1910697705 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(770, 153)
 
-[node name="Headcrab3" parent="." unique_id=1959334438 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab3" parent="Enemies" unique_id=1959334438 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(769, 87)
 
-[node name="Headcrab4" parent="." unique_id=1452855691 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab4" parent="Enemies" unique_id=1452855691 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(744, 110)
 
-[node name="Headcrab5" parent="." unique_id=1876736962 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab5" parent="Enemies" unique_id=1876736962 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(741, 169)
 
-[node name="Headcrab6" parent="." unique_id=59836092 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab6" parent="Enemies" unique_id=59836092 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(754, 215)
 
-[node name="Headcrab7" parent="." unique_id=1227895351 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab7" parent="Enemies" unique_id=1227895351 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(771, 263)
 
-[node name="Headcrab8" parent="." unique_id=223340861 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab8" parent="Enemies" unique_id=223340861 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(800, 306)
 
-[node name="Headcrab9" parent="." unique_id=477092861 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab9" parent="Enemies" unique_id=477092861 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(747, 329)
 
-[node name="Headcrab10" parent="." unique_id=1601823269 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab10" parent="Enemies" unique_id=1601823269 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(708, 274)
 
-[node name="Headcrab11" parent="." unique_id=1941483078 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab11" parent="Enemies" unique_id=1941483078 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(692, 224)
 
-[node name="Headcrab12" parent="." unique_id=305055785 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab12" parent="Enemies" unique_id=305055785 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(672, 169)
 
-[node name="Headcrab13" parent="." unique_id=1273612978 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab13" parent="Enemies" unique_id=1273612978 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(655, 82)
 
-[node name="Headcrab14" parent="." unique_id=637312657 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab14" parent="Enemies" unique_id=637312657 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(699, 49)
 
-[node name="Headcrab15" parent="." unique_id=2141137453 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab15" parent="Enemies" unique_id=2141137453 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(720, 110)
 
-[node name="Headcrab16" parent="." unique_id=1718369323 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab16" parent="Enemies" unique_id=1718369323 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(655, 120)
 
-[node name="Headcrab17" parent="." unique_id=1523155144 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab17" parent="Enemies" unique_id=1523155144 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(650, 179)
 
-[node name="Headcrab18" parent="." unique_id=913162580 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab18" parent="Enemies" unique_id=913162580 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(655, 247)
 
-[node name="Headcrab19" parent="." unique_id=1373814780 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab19" parent="Enemies" unique_id=1373814780 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(678, 306)
 
-[node name="Headcrab20" parent="." unique_id=716120090 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab20" parent="Enemies" unique_id=716120090 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(700, 375)
 
-[node name="Headcrab21" parent="." unique_id=1142574574 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab21" parent="Enemies" unique_id=1142574574 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(652, 370)
 
-[node name="Headcrab22" parent="." unique_id=1574654730 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab22" parent="Enemies" unique_id=1574654730 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(754, 378)
 
-[node name="Headcrab23" parent="." unique_id=1965021313 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab23" parent="Enemies" unique_id=1965021313 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(811, 379)
 
-[node name="Headcrab24" parent="." unique_id=253744322 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab24" parent="Enemies" unique_id=253744322 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(857, 347)
 
-[node name="Headcrab25" parent="." unique_id=1246969449 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab25" parent="Enemies" unique_id=1246969449 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(857, 347)
-
-[node name="Ammo" parent="." unique_id=1854567498 instance=ExtResource("12_854xt")]

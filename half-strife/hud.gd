@@ -5,6 +5,7 @@ var last_health = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	last_song = AudioFiles.music.pick_random()
 	
@@ -47,4 +48,11 @@ func hit(health):
 	$SFX.stream = AudioFiles.sfx["hit"]
 	$SFX.play()
 	
+
+func switch(index):
+	$weaponSwap.texture = AudioFiles.weapons[index]
+	$weaponSwap.show()
+	$weaponTime.start()
 	
+func _on_weapon_time_timeout() -> void:
+	$weaponSwap.hide()

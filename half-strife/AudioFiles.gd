@@ -15,6 +15,7 @@ var sfx = {
 	
 	"ammo" : [preload("res://assets/sfx/reload1.wav"), preload("res://assets/sfx/reload2.wav"), preload("res://assets/sfx/reload3.wav")],
 	"bullet" : [preload("res://assets/sfx/bullet_hit1.wav"), preload("res://assets/sfx/bullet_hit2.wav")],
+	"dry_fire" : preload("res://assets/sfx/dryfire1.wav"),
 	
 	"hc_hit" : [preload("res://assets/sfx/hc_pain1.wav"), preload("res://assets/sfx/hc_pain2.wav"), preload("res://assets/sfx/hc_pain3.wav")],
 	"hc_die" : [preload("res://assets/sfx/hc_die1.wav"), preload("res://assets/sfx/hc_die2.wav")],
@@ -35,3 +36,11 @@ var HEV = {
 	"HEV_Intro" : preload("res://assets/sfx/hev_logon.wav"),
 	"health_critical" : preload("res://assets/sfx/health_critical.wav")
 }
+
+# The shameful use of audio index file for textures
+var weapons = [
+	preload("res://assets/HudWep (1).png"),
+	preload("res://assets/HudWep (2).png"),
+	preload("res://assets/HudWep (4).png"),
+	preload("res://assets/HudWep (3).png")
+]

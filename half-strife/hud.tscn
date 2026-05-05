@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://deceso5lld5l1" path="res://assets/crosshair.png" id="1_37p78"]
 [ext_resource type="Script" uid="uid://di0x3j7b0qx1w" path="res://hud.gd" id="1_64ctp"]
 [ext_resource type="FontFile" uid="uid://mgbyjyqdaawr" path="res://Fonts/trebuc.ttf" id="3_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://hgpqjpwh1sbk" path="res://assets/HudWep (1).png" id="4_640wx"]
 
 [sub_resource type="Theme" id="Theme_640wx"]
 default_font = ExtResource("3_8sq4i")
@@ -78,4 +79,12 @@ theme_override_font_sizes/font_size = 40
 text = "0"
 horizontal_alignment = 2
 
+[node name="weaponTime" type="Timer" parent="." unique_id=392980425]
+
+[node name="weaponSwap" type="Sprite2D" parent="." unique_id=754965205]
+visible = false
+texture = ExtResource("4_640wx")
+offset = Vector2(86, 23)
+
 [connection signal="finished" from="music" to="." method="_on_music_finished"]
+[connection signal="timeout" from="weaponTime" to="." method="_on_weapon_time_timeout"]

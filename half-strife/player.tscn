@@ -521,11 +521,18 @@ z_index = 1
 position = Vector2(-4, -1)
 shape = SubResource("CapsuleShape2D_nvl01")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
-zoom = Vector2(1.5, 1.5)
+[node name="pickup" type="Area2D" parent="." unique_id=257690960]
+
+[node name="pickupBox" type="CollisionShape2D" parent="pickup" unique_id=270624469 groups=["player"]]
+z_index = 1
+position = Vector2(-4, -1)
+shape = SubResource("CapsuleShape2D_nvl01")
 
 [node name="Attack" type="Area2D" parent="." unique_id=1224267609]
+position = Vector2(1.475, 0)
 script = ExtResource("27_qtqh7")
+heldWeapons = [0]
+ammo = [1, 0, 0, 0]
 
 [node name="MeleeCollision" type="CollisionShape2D" parent="Attack" unique_id=1815069996]
 position = Vector2(26, 0)
@@ -567,18 +574,24 @@ wait_time = 0.05
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=909642312]
 
+[node name="DamageCooldown" type="Timer" parent="." unique_id=1185803211]
+
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1600107113]
 position = Vector2(1, 0)
 current = true
 
 [node name="Weapons" type="AudioStreamPlayer2D" parent="." unique_id=2007322071]
 
-[node name="DamageCooldown" type="Timer" parent="." unique_id=1185803211]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
+zoom = Vector2(1.5, 1.5)
 
 [connection signal="attack" from="." to="Attack" method="_on_player_attack"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="area_entered" from="pickup" to="." method="_on_pickup_area_entered"]
+[connection signal="area_exited" from="pickup" to="." method="_on_pickup_area_exited"]
 [connection signal="body_entered" from="Attack" to="Attack" method="_on_body_entered"]
 [connection signal="body_exited" from="Attack" to="Attack" method="_on_body_exited"]
+[connection signal="switch" from="Attack" to="." method="_on_switch"]
 [connection signal="timeout" from="Attack/FlashTimer" to="." method="_on_flash_timer_timeout"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="DamageCooldown" to="." method="_on_damage_cooldown_timeout"]
