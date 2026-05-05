@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cvnkqjt1fre60"]
+
+[ext_resource type="Script" uid="uid://y121a4ntcqe5" path="res://ammo.gd" id="1_mulmr"]
+[ext_resource type="Texture2D" uid="uid://d1u2b6s1nt508" path="res://assets/357ammo_1(1).png" id="2_cuwaw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rfx0k"]
+
+[node name="Ammo" type="Area2D" unique_id=276801918 groups=["ammo"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_mulmr")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1309825699]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_cuwaw")
+region_rect = Rect2(244.08994, 92.399994, 89.53998, 42.349976)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=704191394]
+shape = SubResource("CircleShape2D_rfx0k")

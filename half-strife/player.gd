@@ -9,20 +9,13 @@ var hittable = true
 
 var health = 100
 
-var weapons = ["crowbar", "revolver", "shotgun", "smg"]
-var heldWeapons = [0, 1, 2, 3]
-var ammo = [100, 100, 100, 100]
-
-var max_ammo = 100
-
-@export var weaponIndex = 0
 var animation
 
 signal attack
 signal hit
 
 func _ready() -> void:
-	$PlayerSprite.play(weapons[weaponIndex] + "Idle")
+	$PlayerSprite.play($Attack.weaponSwitch() + "Idle")
 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -38,24 +31,9 @@ func _process(delta: float) -> void:
 	check_damage()
 	
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
+	var currentWeapon = $Attack.weaponSwitch()
 	
-	if Input.is_action_just_pressed("weaponUp"):
-		if weaponIndex != heldWeapons.size() - 1:
-			weaponIndex += 1
-		else:
-			weaponIndex = 0 
-		$AttackCooldown.stop()
-		
-	if Input.is_action_just_pressed("weaponDown"):
-		if weaponIndex != 0:
-			weaponIndex -= 1
-		else:
-			weaponIndex = heldWeapons.size() - 1
-		$AttackCooldown.stop()
-	
-	var currentWeapon = weapons[heldWeapons[weaponIndex]]
-	
-	if Input.is_action_pressed("click") and $AttackCooldown.is_stopped():
+	if Input.is_action_pressed("click") and $AttackCooldown.is_stopped() and $Attack.ammo[$Attack.weaponIndex] > 0:
 			animation = "Attack"
 			attack.emit(currentWeapon)
 			$PlayerSprite.play()
@@ -84,30 +62,35 @@ func _process(delta: float) -> void:
 		$PlayerSprite.play()
 
 func check_damage():
-	if health <= 0:
-		health = 0
+	for i in range(get_slide_collision_count()):
+		var col = get_slide_collision(i)
+		var collider = col.get_collider()
+		
+		if collider.is_in_group("ammo"):
+			var AmmoArray = collider.getAmmo()
+			$Attack.ammoCheck(AmmoArray, collider)
 	
-	if hittable:
-		for i in range(get_slide_collision_count()):
-			var col = get_slide_collision(i)
-			var collider = col.get_collider()
+		if health <= 0:
+			health = 0
+			hittable = false
+		
+		if hittable and collider.is_in_group("enemies"):
+			health -= randi_range(8, 12)
+			if health <= 0:
+				health = 0
 			
-			if collider.is_in_group("enemies"):
-				health -= randi_range(8, 12)
-				if health <= 0:
-					health = 0
-				
-				var direction = (global_position - collider.global_position).normalized()
-				var knockback_force = 800  # tweak this
-				velocity = direction * knockback_force
-				
-				set_collision_layer_value(1, false)
-				set_collision_mask_value(1, false)
-				hittable = false
-				
-				$DamageCooldown.start()
-				hit.emit()
-				return
+			var direction = (global_position - collider.global_position).normalized()
+			var knockback_force = 800  # tweak this
+			velocity = direction * knockback_force
+			
+			set_collision_layer_value(1, false)
+			set_collision_mask_value(1, false)
+			hittable = false
+			
+			$DamageCooldown.start()
+			hit.emit()
+			return
+
 
 func _on_attack_cooldown_timeout() -> void:
 	$AttackCooldown.stop()

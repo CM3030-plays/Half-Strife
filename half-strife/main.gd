@@ -12,6 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$Hud/Health.text = str($Player.health)
+	$Hud/Ammo.text = str($Player/Attack.ammo[$Player/Attack.weaponIndex])
 	
 	for body in get_tree().get_nodes_in_group("enemies"):
 		body.playerTrack($Player.position)

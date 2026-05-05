@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://evriqg8amuyy" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech_c5.png" id="9_td3sr"]
 [ext_resource type="Texture2D" uid="uid://bfco6cv1ihwdi" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech8b.png" id="10_od4o4"]
 [ext_resource type="PackedScene" uid="uid://bscf74onitq78" path="res://headcrab.tscn" id="11_unbmy"]
+[ext_resource type="PackedScene" uid="uid://cvnkqjt1fre60" path="res://ammo.tscn" id="12_854xt"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_074og"]
 tile_data = PackedInt32Array(0, 5, 0, 131072, 5, 0, 2, 5, 0, 131074, 5, 0)
@@ -226,3 +227,5 @@ position = Vector2(857, 347)
 
 [node name="Headcrab25" parent="." unique_id=1246969449 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(857, 347)
+
+[node name="Ammo" parent="." unique_id=1854567498 instance=ExtResource("12_854xt")]
