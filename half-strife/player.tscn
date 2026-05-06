@@ -581,6 +581,7 @@ position = Vector2(1, 0)
 current = true
 
 [node name="Weapons" type="AudioStreamPlayer2D" parent="." unique_id=2007322071]
+bus = &"SFX"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
 enabled = false

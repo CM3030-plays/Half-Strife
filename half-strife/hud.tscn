@@ -60,11 +60,14 @@ height = 0.07
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=675235447]
 volume_db = -10.85
+bus = &"Music"
 
 [node name="HEV" type="AudioStreamPlayer" parent="." unique_id=785285648]
 volume_db = -7.32
+bus = &"Music"
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=983146160]
+bus = &"SFX"
 
 [node name="Ammo" type="Label" parent="." unique_id=1956773006]
 anchors_preset = 3

@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 func start():
 	$Hud/menu.hide()
 	$Player/Camera2D.enabled = true
+	$Hud.start()
 
 func loadLevel(path : String):
 	if currentLevel:

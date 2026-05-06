@@ -2,6 +2,7 @@ extends Node
 
 var sfx = {
 	"hit" : preload("res://assets/sfx/buzz.wav"),
+	"walk" : [preload("res://assets/sfx/npc_step1.wav"), preload("res://assets/sfx/npc_step2.wav"), preload("res://assets/sfx/npc_step3.wav"), preload("res://assets/sfx/npc_step4.wav")],
 	
 	"crowbar_miss" : preload("res://assets/sfx/cbar_miss1.wav"), 
 	"crowbar_hit" : preload("res://assets/sfx/cbar_hitbod2.wav"),
@@ -16,6 +17,7 @@ var sfx = {
 	"ammo" : [preload("res://assets/sfx/reload1.wav"), preload("res://assets/sfx/reload2.wav"), preload("res://assets/sfx/reload3.wav")],
 	"bullet" : [preload("res://assets/sfx/bullet_hit1.wav"), preload("res://assets/sfx/bullet_hit2.wav")],
 	"dry_fire" : preload("res://assets/sfx/dryfire1.wav"),
+	"switch" : preload("res://assets/sfx/wpn_hudoff.wav"),
 	
 	"hc_hit" : [preload("res://assets/sfx/hc_pain1.wav"), preload("res://assets/sfx/hc_pain2.wav"), preload("res://assets/sfx/hc_pain3.wav")],
 	"hc_die" : [preload("res://assets/sfx/hc_die1.wav"), preload("res://assets/sfx/hc_die2.wav")],
@@ -34,7 +36,9 @@ preload("res://assets/music/half-life (8).mp3")
 
 var HEV = {
 	"HEV_Intro" : preload("res://assets/sfx/hev_logon.wav"),
-	"health_critical" : preload("res://assets/sfx/health_critical.wav")
+	"health_critical" : preload("res://assets/sfx/health_critical.wav"),
+	
+	"ui" : preload("res://assets/sfx/wpn_select.wav")
 }
 
 # The shameful use of audio index file for textures

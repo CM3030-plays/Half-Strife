@@ -127,6 +127,8 @@ func weaponSwitch():
 		else:
 			weaponIndex = 0
 		$"../AttackCooldown".stop()
+		$"../Weapons".stream = AudioFiles.sfx["switch"]
+		$"../Weapons".play()
 		switch.emit()
 		
 	if Input.is_action_just_pressed("weaponDown"):
@@ -135,6 +137,8 @@ func weaponSwitch():
 		else:
 			weaponIndex = heldWeapons.size() - 1
 		$"../AttackCooldown".stop()
+		$"../Weapons".stream = AudioFiles.sfx["switch"]
+		$"../Weapons".play()
 		switch.emit()
 	
 	return get_current_weapon()
