@@ -5,7 +5,17 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rfx0k"]
 
+[sub_resource type="Gradient" id="Gradient_rfx0k"]
+colors = PackedColorArray(1, 0.96533334, 0.74, 0.93333334, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cuwaw"]
+gradient = SubResource("Gradient_rfx0k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [node name="Ammo" type="Area2D" unique_id=1079871397 groups=["ammo"]]
+z_index = -1
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_mulmr")
@@ -17,3 +27,7 @@ region_rect = Rect2(244.08994, 92.399994, 89.53998, 42.349976)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=704191394]
 shape = SubResource("CircleShape2D_rfx0k")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1333607531]
+energy = 0.23
+texture = SubResource("GradientTexture2D_cuwaw")

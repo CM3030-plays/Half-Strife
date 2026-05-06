@@ -7,16 +7,6 @@ var last_health = 100
 func _ready() -> void:
 	randomize()
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-	last_song = AudioFiles.music.pick_random()
-	
-	$HEV.stream = AudioFiles.HEV["HEV_Intro"]
-	$HEV.play()
-	
-	await $HEV.finished
-	
-	$music.stream = last_song
-	$music.play()
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -32,6 +22,17 @@ func _on_music_finished() -> void:
 		temp = AudioFiles.music.pick_random()
 	
 	last_song = temp
+	$music.stream = last_song
+	$music.play()
+
+func start():
+	last_song = AudioFiles.music.pick_random()
+	
+	$HEV.stream = AudioFiles.HEV["HEV_Intro"]
+	$HEV.play()
+	
+	await $HEV.finished
+	
 	$music.stream = last_song
 	$music.play()
 

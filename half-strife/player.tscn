@@ -583,6 +583,7 @@ current = true
 [node name="Weapons" type="AudioStreamPlayer2D" parent="." unique_id=2007322071]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2132216480]
+enabled = false
 zoom = Vector2(1.5, 1.5)
 
 [connection signal="attack" from="." to="Attack" method="_on_player_attack"]

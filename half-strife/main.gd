@@ -6,7 +6,7 @@ var currentLevel
 func _ready() -> void:
 	loadLevel(startingLevel)
 	$Player.global_position = $Level/Level/StartPos.global_position
-	
+	start()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,6 +19,10 @@ func _process(delta: float) -> void:
 	
 	for body in get_tree().get_nodes_in_group("enemies"):
 		body.playerTrack($Player.position)
+
+func start():
+	$Hud/menu.hide()
+	$Player/Camera2D.enabled = true
 
 func loadLevel(path : String):
 	if currentLevel:

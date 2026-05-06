@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://48p04wmgen18"]
+
+[ext_resource type="Texture2D" uid="uid://bbdpmgctvv2t1" path="res://assets/menu.png" id="1_7vrkn"]
+[ext_resource type="Theme" uid="uid://c3516384ufkq8" path="res://assets/TextTheme.tres" id="2_fu7sn"]
+[ext_resource type="Script" uid="uid://441k0jsvvu8d" path="res://exit.gd" id="3_fu7sn"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1773636673]
+
+[node name="UI_SFX" type="AudioStreamPlayer" parent="." unique_id=741179019]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1848018371]
+position = Vector2(574, 446.5)
+scale = Vector2(1.1201551, 1.1614987)
+texture = ExtResource("1_7vrkn")
+
+[node name="Start" type="Button" parent="." unique_id=1097744459]
+visible = false
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 245.0
+offset_bottom = 178.0
+theme = ExtResource("2_fu7sn")
+text = "New Game"
+flat = true
+
+[node name="Options" type="Button" parent="." unique_id=579942364]
+visible = false
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 194.0
+offset_bottom = 242.0
+theme = ExtResource("2_fu7sn")
+text = "Options"
+flat = true
+
+[node name="Exit" type="Button" parent="." unique_id=96772837]
+visible = false
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 134.0
+offset_bottom = 306.0
+theme = ExtResource("2_fu7sn")
+text = "Exit"
+flat = true
+script = ExtResource("3_fu7sn")
+
+[node name="OptionMenu" type="CanvasGroup" parent="." unique_id=1027825463]
+
+[node name="vol_text" type="Label" parent="OptionMenu" unique_id=313460500]
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 182.0
+offset_bottom = 192.0
+theme = ExtResource("2_fu7sn")
+text = "Volume"
+vertical_alignment = 1
+
+[node name="back" type="Button" parent="OptionMenu" unique_id=944876101]
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 160.0
+offset_bottom = 370.0
+theme = ExtResource("2_fu7sn")
+text = "Back"
+flat = true
+
+[node name="volume" type="HSlider" parent="OptionMenu" unique_id=1605107608]
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 512.0
+offset_bottom = 192.0
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]
