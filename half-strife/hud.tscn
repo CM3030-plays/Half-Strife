@@ -21,6 +21,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.7293233, 0.48214287)
 
 [node name="Hud" type="CanvasLayer" unique_id=1323355103]
+process_mode = 3
 script = ExtResource("1_64ctp")
 
 [node name="menu" parent="." unique_id=507071559 instance=ExtResource("2_a2258")]
@@ -40,6 +41,22 @@ theme = SubResource("Theme_640wx")
 theme_override_colors/font_color = Color(1, 0.627451, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "100"
+
+[node name="Ammo" type="Label" parent="." unique_id=1956773006]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -47.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.627451, 0, 1)
+theme_override_fonts/font = ExtResource("3_8sq4i")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 2
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=51370813]
 z_index = 1
@@ -68,22 +85,6 @@ bus = &"Music"
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=983146160]
 bus = &"SFX"
-
-[node name="Ammo" type="Label" parent="." unique_id=1956773006]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -23.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 0.627451, 0, 1)
-theme_override_fonts/font = ExtResource("3_8sq4i")
-theme_override_font_sizes/font_size = 40
-text = "0"
-horizontal_alignment = 2
 
 [node name="weaponTime" type="Timer" parent="." unique_id=392980425]
 

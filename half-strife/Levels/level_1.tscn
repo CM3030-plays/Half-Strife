@@ -1,50 +1,50 @@
-[gd_scene format=4 uid="uid://dngw32k8vxx2s"]
+[gd_scene format=4 uid="uid://da3pv0ghbdh0f"]
 
-[ext_resource type="Script" uid="uid://oy5uswihe2wk" path="res://Levels/level.gd" id="1_2agai"]
-[ext_resource type="Texture2D" uid="uid://bxskhdikoufha" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0crete2_flr5.png" id="1_cccc0"]
-[ext_resource type="Texture2D" uid="uid://daj320dah6rm0" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f01.png" id="2_854xt"]
-[ext_resource type="Texture2D" uid="uid://b6kcbf02yewas" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f02.png" id="3_fck6n"]
-[ext_resource type="Texture2D" uid="uid://cqrng1bhbvwvp" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f03b.png" id="4_2agai"]
-[ext_resource type="Texture2D" uid="uid://cqlw7ik42g7y3" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0c2a4_flr6b.png" id="5_cl2jo"]
-[ext_resource type="Texture2D" uid="uid://nkoo4kuauutq" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0out_grnd3.png" id="6_m6jpd"]
-[ext_resource type="Texture2D" uid="uid://c5vorju72jei7" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech7b.png" id="7_vrwbg"]
-[ext_resource type="Texture2D" uid="uid://b7ksvevxmsba" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech7.png" id="8_62few"]
-[ext_resource type="Texture2D" uid="uid://evriqg8amuyy" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech_c5.png" id="9_td3sr"]
-[ext_resource type="Texture2D" uid="uid://bfco6cv1ihwdi" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech8b.png" id="10_od4o4"]
-[ext_resource type="PackedScene" uid="uid://bscf74onitq78" path="res://headcrab.tscn" id="11_unbmy"]
-[ext_resource type="PackedScene" uid="uid://cvnkqjt1fre60" path="res://ammo.tscn" id="12_854xt"]
-[ext_resource type="Texture2D" uid="uid://djr62evwqnlah" path="res://assets/doorLight.png" id="13_fck6n"]
+[ext_resource type="Script" uid="uid://oy5uswihe2wk" path="res://Levels/level.gd" id="1_2hkqn"]
+[ext_resource type="Texture2D" uid="uid://bxskhdikoufha" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0crete2_flr5.png" id="2_34erp"]
+[ext_resource type="Texture2D" uid="uid://daj320dah6rm0" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f01.png" id="3_k2bse"]
+[ext_resource type="Texture2D" uid="uid://b6kcbf02yewas" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f02.png" id="4_c7pbv"]
+[ext_resource type="Texture2D" uid="uid://cqrng1bhbvwvp" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_f03b.png" id="5_77l7m"]
+[ext_resource type="Texture2D" uid="uid://cqlw7ik42g7y3" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0c2a4_flr6b.png" id="6_1rr3k"]
+[ext_resource type="Texture2D" uid="uid://nkoo4kuauutq" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0out_grnd3.png" id="7_hsj5a"]
+[ext_resource type="Texture2D" uid="uid://c5vorju72jei7" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech7b.png" id="8_w38ni"]
+[ext_resource type="Texture2D" uid="uid://b7ksvevxmsba" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech7.png" id="9_uclwg"]
+[ext_resource type="Texture2D" uid="uid://evriqg8amuyy" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech_c5.png" id="10_8x6gh"]
+[ext_resource type="Texture2D" uid="uid://bfco6cv1ihwdi" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech8b.png" id="11_442u8"]
+[ext_resource type="PackedScene" uid="uid://cvnkqjt1fre60" path="res://ammo.tscn" id="12_fxl23"]
+[ext_resource type="PackedScene" uid="uid://bscf74onitq78" path="res://headcrab.tscn" id="13_xg5g8"]
+[ext_resource type="Texture2D" uid="uid://djr62evwqnlah" path="res://assets/doorLight.png" id="14_p7b0h"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_074og"]
 tile_data = PackedInt32Array(0, 5, 0, 131072, 5, 0, 2, 5, 0, 131074, 5, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ejcy"]
-texture = ExtResource("1_cccc0")
+texture = ExtResource("2_34erp")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7d4u7"]
-texture = ExtResource("2_854xt")
+texture = ExtResource("3_k2bse")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_41tfl"]
-texture = ExtResource("3_fck6n")
+texture = ExtResource("4_c7pbv")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lvee5"]
-texture = ExtResource("4_2agai")
+texture = ExtResource("5_77l7m")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqb7q"]
-texture = ExtResource("5_cl2jo")
+texture = ExtResource("6_1rr3k")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4kiir"]
-texture = ExtResource("6_m6jpd")
+texture = ExtResource("7_hsj5a")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
@@ -62,7 +62,7 @@ pattern_0 = SubResource("TileMapPattern_074og")
 polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oeuj"]
-texture = ExtResource("7_vrwbg")
+texture = ExtResource("8_w38ni")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ycdy4")
@@ -81,7 +81,7 @@ texture_region_size = Vector2i(64, 64)
 polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cbvb"]
-texture = ExtResource("8_62few")
+texture = ExtResource("9_uclwg")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_w48qg")
@@ -100,7 +100,7 @@ texture_region_size = Vector2i(64, 64)
 polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ron8g"]
-texture = ExtResource("9_td3sr")
+texture = ExtResource("10_8x6gh")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_vivmo")
@@ -110,7 +110,7 @@ texture_region_size = Vector2i(64, 64)
 polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifnyy"]
-texture = ExtResource("10_od4o4")
+texture = ExtResource("11_442u8")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2cqfq")
@@ -139,7 +139,7 @@ sources/3 = SubResource("TileSetAtlasSource_ifnyy")
 size = Vector2(63, 20)
 
 [node name="Level" type="Node2D" unique_id=657810730]
-script = ExtResource("1_2agai")
+script = ExtResource("1_2hkqn")
 
 [node name="StartPos" type="Marker2D" parent="." unique_id=1433827736]
 position = Vector2(213, 194)
@@ -156,95 +156,23 @@ collision_enabled = false
 z_index = 2
 z_as_relative = false
 scale = Vector2(0.75, 0.75)
-tile_map_data = PackedByteArray("AAAFAAUAAwAAAAAAAAAGAAUAAwABAAAAAAAHAAUAAwAAAAAAAAAIAAUAAwABAAAAAAAJAAUAAwAAAAAAAAAKAAUAAwABAAAAAAALAAUAAwAAAAAAAAAMAAUAAwABAAAAAAAFAAYAAwAAAAEAAAAGAAYAAwABAAEAAAAFAAcAAwAAAAEAAAAGAAcAAwABAAEAAAAHAAYAAwAAAAEAAAAIAAYAAwABAAEAAAAHAAcAAwAAAAEAAAAIAAcAAwABAAEAAAAJAAYAAwAAAAEAAAAKAAYAAwABAAEAAAAJAAcAAwAAAAEAAAAKAAcAAwABAAEAAAALAAYAAwAAAAEAAAAMAAYAAwABAAEAAAALAAcAAwAAAAEAAAAMAAcAAwABAAEAAAAFAAIAAwABAAAAADAFAAEAAwABAAEAADAGAAIAAwAAAAAAADAGAAEAAwAAAAEAADAHAAIAAwABAAAAADAHAAEAAwABAAEAADAIAAIAAwAAAAAAADAIAAEAAwAAAAEAADAJAAIAAwABAAAAADAJAAEAAwABAAEAADAKAAIAAwAAAAAAADAKAAEAAwAAAAEAADALAAIAAwABAAAAADALAAEAAwABAAEAADAMAAIAAwAAAAAAADAMAAEAAwAAAAEAADA=")
+tile_map_data = PackedByteArray("AAAFAAUAAwAAAAAAAAAGAAUAAwABAAAAAAAHAAUAAwAAAAAAAAAIAAUAAwABAAAAAAAJAAUAAwAAAAAAAAAKAAUAAwABAAAAAAALAAUAAwAAAAAAAAAMAAUAAwABAAAAAAAFAAYAAwAAAAEAAAAGAAYAAwABAAEAAAAFAAcAAwAAAAEAAAAGAAcAAwABAAEAAAAHAAYAAwAAAAEAAAAIAAYAAwABAAEAAAAHAAcAAwAAAAEAAAAIAAcAAwABAAEAAAAJAAYAAwAAAAEAAAAKAAYAAwABAAEAAAAJAAcAAwAAAAEAAAAKAAcAAwABAAEAAAALAAYAAwAAAAEAAAAMAAYAAwABAAEAAAALAAcAAwAAAAEAAAAMAAcAAwABAAEAAAAFAAIAAwABAAAAADAFAAEAAwABAAEAADAGAAIAAwAAAAAAADAGAAEAAwAAAAEAADAHAAIAAwABAAAAADAHAAEAAwABAAEAADAIAAIAAwAAAAAAADAIAAEAAwAAAAEAADAJAAIAAwABAAAAADAJAAEAAwABAAEAADAKAAIAAwAAAAAAADAKAAEAAwAAAAEAADALAAIAAwABAAAAADALAAEAAwABAAEAADAMAAIAAwAAAAAAADAMAAEAAwAAAAEAAGAMAAAAAwABAAEAAGAMAP//AwAAAAEAAGAMAP7/AwABAAEAAGAMAP3/AwAAAAEAAGAMAPz/AwABAAEAAGAMAPv/AwAAAAEAAGAMAPr/AwABAAAAAAAPAAAAAwAAAAEAAFAPAAEAAwABAAEAAFAPAP7/AwAAAAEAAFAPAP//AwABAAEAAFAPAPz/AwAAAAEAAFAPAP3/AwABAAEAAFAPAPr/AwAAAAEAAFAPAPv/AwABAAEAAFALAPr/AwAAAAAAAAAJAPr/AwAAAAAAAAAKAPr/AwABAAAAAAAHAPr/AwAAAAAAAAAIAPr/AwABAAAAAAAFAPr/AwAAAAAAAAAGAPr/AwABAAAAAAADAPr/AwAAAAAAAAAEAPr/AwABAAAAAAAEAPL/AwAAAAAAADADAPL/AwABAAAAADAGAPL/AwAAAAAAADAFAPL/AwABAAAAADAIAPL/AwAAAAAAADAHAPL/AwABAAAAADAKAPL/AwAAAAAAADAJAPL/AwABAAAAADAMAPL/AwAAAAAAADALAPL/AwABAAAAADAOAPL/AwAAAAAAADANAPL/AwABAAAAADAPAPj/AwAAAAEAAFAPAPn/AwABAAEAAFAPAPb/AwAAAAEAAFAPAPf/AwABAAEAAFAPAPL/AwAAAAEAAFAPAPP/AwABAAEAAFAPAPT/AwAAAAEAAFAPAPX/AwABAAEAAFA=")
 tile_set = SubResource("TileSet_j7m8r")
 
-[node name="shotgunAm" parent="." unique_id=1854567498 instance=ExtResource("12_854xt")]
+[node name="shotgunAm" parent="." unique_id=1854567498 instance=ExtResource("12_fxl23")]
 ammoType = 1
 
-[node name="revolverAm" parent="." unique_id=1079871397 instance=ExtResource("12_854xt")]
+[node name="revolverAm" parent="." unique_id=1079871397 instance=ExtResource("12_fxl23")]
 position = Vector2(78, -3)
 
-[node name="smgAM" parent="." unique_id=1254816201 instance=ExtResource("12_854xt")]
+[node name="smgAM" parent="." unique_id=1254816201 instance=ExtResource("12_fxl23")]
 position = Vector2(146, 0)
 ammoType = 2
 
 [node name="Enemies" type="Node" parent="." unique_id=507242035]
 
-[node name="Headcrab" parent="Enemies" unique_id=1944296124 groups=["enemies"] instance=ExtResource("11_unbmy")]
+[node name="Headcrab" parent="Enemies" unique_id=1944296124 groups=["enemies"] instance=ExtResource("13_xg5g8")]
 position = Vector2(793, 200)
-
-[node name="Headcrab2" parent="Enemies" unique_id=1910697705 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(770, 153)
-
-[node name="Headcrab3" parent="Enemies" unique_id=1959334438 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(769, 87)
-
-[node name="Headcrab4" parent="Enemies" unique_id=1452855691 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(744, 110)
-
-[node name="Headcrab5" parent="Enemies" unique_id=1876736962 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(741, 169)
-
-[node name="Headcrab6" parent="Enemies" unique_id=59836092 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(754, 215)
-
-[node name="Headcrab7" parent="Enemies" unique_id=1227895351 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(771, 263)
-
-[node name="Headcrab8" parent="Enemies" unique_id=223340861 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(800, 306)
-
-[node name="Headcrab9" parent="Enemies" unique_id=477092861 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(747, 329)
-
-[node name="Headcrab10" parent="Enemies" unique_id=1601823269 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(708, 274)
-
-[node name="Headcrab11" parent="Enemies" unique_id=1941483078 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(692, 224)
-
-[node name="Headcrab12" parent="Enemies" unique_id=305055785 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(672, 169)
-
-[node name="Headcrab13" parent="Enemies" unique_id=1273612978 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(655, 82)
-
-[node name="Headcrab14" parent="Enemies" unique_id=637312657 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(699, 49)
-
-[node name="Headcrab15" parent="Enemies" unique_id=2141137453 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(720, 110)
-
-[node name="Headcrab16" parent="Enemies" unique_id=1718369323 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(655, 120)
-
-[node name="Headcrab17" parent="Enemies" unique_id=1523155144 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(650, 179)
-
-[node name="Headcrab18" parent="Enemies" unique_id=913162580 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(655, 247)
-
-[node name="Headcrab19" parent="Enemies" unique_id=1373814780 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(678, 306)
-
-[node name="Headcrab20" parent="Enemies" unique_id=716120090 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(700, 375)
-
-[node name="Headcrab21" parent="Enemies" unique_id=1142574574 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(652, 370)
-
-[node name="Headcrab22" parent="Enemies" unique_id=1574654730 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(754, 378)
-
-[node name="Headcrab23" parent="Enemies" unique_id=1965021313 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(811, 379)
-
-[node name="Headcrab24" parent="Enemies" unique_id=253744322 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(857, 347)
-
-[node name="Headcrab25" parent="Enemies" unique_id=1246969449 groups=["enemies"] instance=ExtResource("11_unbmy")]
-position = Vector2(857, 347)
 
 [node name="levelChange" type="Area2D" parent="." unique_id=1938597897]
 position = Vector2(-125, 82)
@@ -257,8 +185,6 @@ shape = SubResource("RectangleShape2D_2agai")
 position = Vector2(17, 152)
 energy = 0.87
 shadow_enabled = true
-texture = ExtResource("13_fck6n")
+texture = ExtResource("14_p7b0h")
 offset = Vector2(0, -50.79)
 texture_scale = 0.2
-
-[connection signal="body_entered" from="levelChange" to="." method="_on_level_change_body_entered"]

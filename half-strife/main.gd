@@ -1,12 +1,14 @@
 extends Node2D
-var startingLevel = "res://Levels/level_debug.tscn"
+const levels = ["res://Levels/level_1.tscn","res://Levels/level_debug.tscn"]
+var levelIndex = 0
+
+@export var startingLevel = levels[0]
 var currentLevel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	loadLevel(startingLevel)
-	$Player.global_position = $Level/Level/StartPos.global_position
-	start()
+	get_tree().paused = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,6 +27,11 @@ func start():
 	$Player/Camera2D.enabled = true
 	$Hud.start()
 
+func nextLevel():
+	if !levelIndex == levels.size() - 1:
+		levelIndex += 1
+		loadLevel(levels[levelIndex])
+
 func loadLevel(path : String):
 	if currentLevel:
 		currentLevel.queue_free()
@@ -34,6 +41,7 @@ func loadLevel(path : String):
 	currentLevel = level_scene.instantiate()
 	
 	$Level.add_child(currentLevel)
+	$Level/Level.nextLevel.connect(nextLevel)
 
 
 func _on_player_hit() -> void:

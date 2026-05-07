@@ -3,10 +3,15 @@ extends CanvasLayer
 var last_song
 var last_health = 100
 
+signal startGame
+var pause = false
+var gameRunning = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	$menu/Start.pressed.connect(start)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -14,7 +19,22 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	$Crosshair.position = get_viewport().get_mouse_position()
-
+	if Input.is_action_just_pressed("pause") and pause == false and gameRunning:
+		pause = true
+		get_tree().paused = true
+		
+		$menu.show()
+		$Health.hide()
+		$Ammo.hide()
+		
+	elif Input.is_action_just_pressed("pause") and pause == true and gameRunning:
+		pause = false
+		get_tree().paused = false
+		
+		$menu.back()
+		$menu.hide()
+		$Health.show()
+		$Ammo.show()
 
 func _on_music_finished() -> void:
 	var temp = AudioFiles.music.pick_random()
@@ -26,15 +46,31 @@ func _on_music_finished() -> void:
 	$music.play()
 
 func start():
-	last_song = AudioFiles.music.pick_random()
-	
-	$HEV.stream = AudioFiles.HEV["HEV_Intro"]
-	$HEV.play()
-	
-	await $HEV.finished
-	
-	$music.stream = last_song
-	$music.play()
+	if gameRunning:
+		get_tree().paused = false
+		$menu.back()
+		$menu.hide()
+		$Health.show()
+		$Ammo.show()
+	else:
+		gameRunning = true
+		get_tree().paused = false
+		startGame.emit()
+		
+		$menu.back()
+		$menu.hide()
+		$Health.show()
+		$Ammo.show()
+		
+		last_song = AudioFiles.music.pick_random()
+		
+		$HEV.stream = AudioFiles.HEV["HEV_Intro"]
+		$HEV.play()
+		
+		await $HEV.finished
+		
+		$music.stream = last_song
+		$music.play()
 
 func hit(health):
 	if health <= 0:
