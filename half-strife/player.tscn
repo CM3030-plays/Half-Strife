@@ -585,7 +585,6 @@ bus = &"SFX"
 enabled = false
 zoom = Vector2(1.5, 1.5)
 
-[connection signal="attack" from="." to="Attack" method="_on_player_attack"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="area_entered" from="pickup" to="." method="_on_pickup_area_entered"]
 [connection signal="area_exited" from="pickup" to="." method="_on_pickup_area_exited"]

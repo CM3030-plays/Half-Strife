@@ -57,6 +57,7 @@ func start():
 		get_tree().paused = false
 		startGame.emit()
 		
+		$menu/Start.text = "Resume"
 		$menu.back()
 		$menu.hide()
 		$Health.show()

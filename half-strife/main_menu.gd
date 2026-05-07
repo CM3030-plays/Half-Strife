@@ -43,3 +43,11 @@ func on_vol_change_SFX(value) -> void:
 	$UI_SFX.stream = AudioFiles.HEV["ui"]
 	$UI_SFX.volume_linear = value
 	$UI_SFX.play()
+
+func hoverSound():
+	$UI_SFX.stream = AudioFiles.HEV["ui_hover"]
+	$UI_SFX.play()
+
+func clickSound():
+	$UI_SFX.stream = AudioFiles.HEV["ui_click"]
+	$UI_SFX.play()

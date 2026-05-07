@@ -9,7 +9,7 @@ var hittable = true
 var health = 100
 var animation
 
-signal attack
+signal death
 signal hit
 signal switch
 
@@ -28,10 +28,15 @@ func _process(delta: float) -> void:
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	var currentWeapon = $Attack.weaponSwitch()
 	
-	if Input.is_action_pressed("click") and $AttackCooldown.is_stopped() and $Attack.has_ammo():
-		animation = "Attack"
-		attack.emit(currentWeapon)
-		$PlayerSprite.play()
+	if Input.is_action_pressed("click") and $AttackCooldown.is_stopped():
+		if $Attack.ammo[$Attack.get_current_index()] == 0:
+				$Weapons.stream = AudioFiles.sfx["dry_fire"]
+				$Weapons.play()
+		
+		if $Attack.attack():
+			animation = "Attack"
+			$PlayerSprite.play()
+			
 	else:
 		if $AttackCooldown.is_stopped():
 			if input_dir == Vector2.ZERO:

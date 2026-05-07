@@ -38,7 +38,9 @@ var HEV = {
 	"HEV_Intro" : preload("res://assets/sfx/hev_logon.wav"),
 	"health_critical" : preload("res://assets/sfx/health_critical.wav"),
 	
-	"ui" : preload("res://assets/sfx/wpn_select.wav")
+	"ui" : preload("res://assets/sfx/wpn_select.wav"),
+	"ui_hover" : preload("res://assets/sfx/wpn_select.wav"),
+	"ui_click" : preload("res://assets/sfx/launch_select2.wav")
 }
 
 # The shameful use of audio index file for textures

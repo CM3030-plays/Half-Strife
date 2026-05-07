@@ -106,8 +106,16 @@ scrollable = false
 tick_count = 11
 ticks_on_borders = true
 
+[connection signal="mouse_entered" from="Start" to="." method="hoverSound"]
+[connection signal="pressed" from="Start" to="." method="clickSound"]
+[connection signal="mouse_entered" from="Options" to="." method="hoverSound"]
 [connection signal="pressed" from="Options" to="." method="options"]
+[connection signal="pressed" from="Options" to="." method="clickSound"]
+[connection signal="mouse_entered" from="Exit" to="." method="hoverSound"]
 [connection signal="pressed" from="Exit" to="." method="exit"]
+[connection signal="pressed" from="Exit" to="." method="clickSound"]
+[connection signal="mouse_entered" from="OptionMenu/back" to="." method="hoverSound"]
 [connection signal="pressed" from="OptionMenu/back" to="." method="back"]
+[connection signal="pressed" from="OptionMenu/back" to="." method="clickSound"]
 [connection signal="drag_ended" from="OptionMenu/sfx" to="." method="on_vol_change_SFX"]
 [connection signal="drag_ended" from="OptionMenu/music" to="." method="on_vol_change"]

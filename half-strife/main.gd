@@ -27,6 +27,19 @@ func start():
 	$Player/Camera2D.enabled = true
 	$Hud.start()
 
+func restart():
+	loadLevel(startingLevel)
+	levelIndex = 0
+	
+	get_tree().paused = true
+	$Hud.gameRunning = false
+	$Hud.pause = false
+	$Hud/Health.hide()
+	$Hud/Ammo.hide()
+	$Hud/menu.show()
+	$Hud/menu/Start.text = "New Game"
+	
+
 func nextLevel():
 	if !levelIndex == levels.size() - 1:
 		levelIndex += 1
