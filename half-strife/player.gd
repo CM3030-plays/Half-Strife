@@ -9,14 +9,18 @@ var hittable = true
 var health = 100
 var animation
 
-signal attack
+signal reset
 signal hit
 signal switch
 
 func _ready() -> void:
 	$PlayerSprite.play($Attack.weaponSwitch() + "Idle")
+	print("PLAYER SCRIPT LOADED")
+	print("SPEED =", SPEED)
 
 func _physics_process(delta: float) -> void:
+	SPEED = 500
+	ACCELERATION = 10.0
 	look_at(get_global_mouse_position())
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	var target_velocity = input_dir * SPEED
@@ -28,9 +32,13 @@ func _process(delta: float) -> void:
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	var currentWeapon = $Attack.weaponSwitch()
 	
-	if Input.is_action_pressed("click") and $AttackCooldown.is_stopped() and $Attack.has_ammo():
-		animation = "Attack"
-		attack.emit(currentWeapon)
+	if Input.is_action_just_pressed("click") and $AttackCooldown.is_stopped() and !$Attack.has_ammo():
+		$Weapons.stream = AudioFiles.sfx["dry_fire"]
+		$Weapons.play()
+	
+	if Input.is_action_pressed("click") and $AttackCooldown.is_stopped():
+		if $Attack.attack(currentWeapon):
+			animation = "Attack"
 		$PlayerSprite.play()
 	else:
 		if $AttackCooldown.is_stopped():
@@ -53,14 +61,28 @@ func _process(delta: float) -> void:
 		$PlayerSprite.animation = currentWeapon + animation
 		$PlayerSprite.play()
 
+func resetPlayer():
+	health = 100
+	$Attack.heldWeapons = [0]
+	$Attack.ammo = [1, 0, 0, 0]
+	$Attack.weaponIndex = 0
+	$Attack.bodysMelee = []
+	$Attack.bodysWall = []
+	
+	velocity = Vector2.ZERO
+	global_position = Vector2.ZERO
+	rotation_degrees = 0
+	reset.emit()
+
 func check_damage():
+	if health <= 0:
+			health = 0
+			hittable = false
+			resetPlayer()
+	
 	for i in range(get_slide_collision_count()):
 		var col = get_slide_collision(i)
 		var collider = col.get_collider()
-	
-		if health <= 0:
-			health = 0
-			hittable = false
 		
 		if hittable and collider.is_in_group("enemies"):
 			health -= randi_range(8, 12)

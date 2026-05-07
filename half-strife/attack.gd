@@ -4,8 +4,8 @@ var bodysMelee = []
 var bodysWall = []
 
 var weapons = ["crowbar", "revolver", "shotgun", "smg"]
-@export var heldWeapons = [2, 3]
-@export var ammo = [1, 30, 12, 150]
+@export var heldWeapons = [0]
+@export var ammo = [1, 0, 0, 0]
 var maxAmmo = [1, 30, 12, 150]
 
 @export var weaponIndex = 0
@@ -31,7 +31,9 @@ func _on_body_exited(body: Node2D) -> void:
 	bodysMelee.erase(body)
 	bodysWall.erase(body)
 
-func _on_player_attack(_weapon : String) -> void:
+
+
+func attack(_weapon : String):
 	var index = get_current_index()
 	var weapon = weapons[index]
 	
@@ -48,11 +50,12 @@ func _on_player_attack(_weapon : String) -> void:
 		for body in bodysMelee:
 			if body.has_method("takeDamage"):
 				body.takeDamage(50, Vector2.ZERO)
+		
+		$"../Weapons".play()
+		return true
 	
 	if weapon == "shotgun":
-		if ammo[index] <= 0:
-			$"../Weapons".stream = AudioFiles.sfx["dry_fire"]
-		else:
+		if !ammo[index] <= 0:
 			ammo[index] -= 1
 			$"../AttackCooldown".start(9.0/11.0)
 			
@@ -66,11 +69,11 @@ func _on_player_attack(_weapon : String) -> void:
 			$"../Weapons".stream = AudioFiles.sfx["shotgun_fire"]
 			$Flash.show()
 			$FlashTimer.start()
+			$"../Weapons".play()
+			return true
 	
 	if weapon == "smg":
-		if ammo[index] <= 0:
-			$"../Weapons".stream = AudioFiles.sfx["dry_fire"]
-		else:
+		if !ammo[index] <= 0:
 			ammo[index] -= 1
 			$"../AttackCooldown".start(0.075)
 			
@@ -83,11 +86,12 @@ func _on_player_attack(_weapon : String) -> void:
 			if straight != null and straight.has_method("takeDamage"):
 				var dir = straight.global_transform.x.normalized()
 				straight.takeDamage(40, dir)
+			
+			$"../Weapons".play()
+			return true
 	
 	if weapon == "revolver":
-		if ammo[index] <= 0:
-			$"../Weapons".stream = AudioFiles.sfx["dry_fire"]
-		else:
+		if !ammo[index] <= 0:
 			ammo[index] -= 1
 			$"../AttackCooldown".start(1)
 			
@@ -100,8 +104,11 @@ func _on_player_attack(_weapon : String) -> void:
 			if straight != null and straight.has_method("takeDamage"):
 				var dir = straight.global_transform.x.normalized()
 				straight.takeDamage(1000, dir)
-	
-	$"../Weapons".play()
+			
+			$"../Weapons".play()
+			return true
+
+
 
 func ammoCheck(array : Array, collider):
 	var ammoAdd = array[0]

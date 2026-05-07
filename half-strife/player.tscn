@@ -509,6 +509,8 @@ collision_mask = 3
 collision_priority = 2.0
 motion_mode = 1
 script = ExtResource("1_7hik5")
+SPEED = null
+ACCELERATION = null
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=2032355288]
 position = Vector2(-0.625, -0.75)
@@ -531,8 +533,6 @@ shape = SubResource("CapsuleShape2D_nvl01")
 [node name="Attack" type="Area2D" parent="." unique_id=1224267609]
 position = Vector2(1.475, 0)
 script = ExtResource("27_qtqh7")
-heldWeapons = [0]
-ammo = [1, 0, 0, 0]
 
 [node name="MeleeCollision" type="CollisionShape2D" parent="Attack" unique_id=1815069996]
 position = Vector2(26, 0)
@@ -587,7 +587,6 @@ bus = &"SFX"
 enabled = false
 zoom = Vector2(1.5, 1.5)
 
-[connection signal="attack" from="." to="Attack" method="_on_player_attack"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="area_entered" from="pickup" to="." method="_on_pickup_area_entered"]
 [connection signal="area_exited" from="pickup" to="." method="_on_pickup_area_exited"]
