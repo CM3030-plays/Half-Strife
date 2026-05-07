@@ -15,7 +15,6 @@ scale = Vector2(1.1201551, 1.1614987)
 texture = ExtResource("1_7vrkn")
 
 [node name="Start" type="Button" parent="." unique_id=1097744459]
-visible = false
 offset_left = 64.0
 offset_top = 128.0
 offset_right = 245.0
@@ -25,7 +24,6 @@ text = "New Game"
 flat = true
 
 [node name="Options" type="Button" parent="." unique_id=579942364]
-visible = false
 offset_left = 64.0
 offset_top = 192.0
 offset_right = 194.0
@@ -35,7 +33,6 @@ text = "Options"
 flat = true
 
 [node name="Exit" type="Button" parent="." unique_id=96772837]
-visible = false
 offset_left = 64.0
 offset_top = 256.0
 offset_right = 134.0
@@ -45,6 +42,7 @@ text = "Exit"
 flat = true
 
 [node name="OptionMenu" type="CanvasGroup" parent="." unique_id=1027825463]
+visible = false
 
 [node name="vol_text" type="Label" parent="OptionMenu" unique_id=313460500]
 offset_left = 64.0

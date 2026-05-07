@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var health = 100
 var dead = false
-var speed = 65
+var speed = 70
 
 var playerFound = false
 var knockback = Vector2.ZERO

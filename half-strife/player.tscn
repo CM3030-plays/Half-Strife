@@ -531,8 +531,6 @@ shape = SubResource("CapsuleShape2D_nvl01")
 [node name="Attack" type="Area2D" parent="." unique_id=1224267609]
 position = Vector2(1.475, 0)
 script = ExtResource("27_qtqh7")
-heldWeapons = [0]
-ammo = [1, 0, 0, 0]
 
 [node name="MeleeCollision" type="CollisionShape2D" parent="Attack" unique_id=1815069996]
 position = Vector2(26, 0)

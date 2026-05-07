@@ -12,7 +12,6 @@ script = ExtResource("1_w48qg")
 [node name="Hud" parent="." unique_id=1323355103 instance=ExtResource("1_5vw27")]
 
 [node name="Player" parent="." unique_id=645128869 instance=ExtResource("7_272bh")]
-position = Vector2(246, 187)
 
 [connection signal="startGame" from="Hud" to="." method="start"]
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]

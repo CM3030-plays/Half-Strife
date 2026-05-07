@@ -31,6 +31,7 @@ func nextLevel():
 	if !levelIndex == levels.size() - 1:
 		levelIndex += 1
 		loadLevel(levels[levelIndex])
+		
 
 func loadLevel(path : String):
 	if currentLevel:
@@ -42,6 +43,7 @@ func loadLevel(path : String):
 	
 	$Level.add_child(currentLevel)
 	$Level/Level.nextLevel.connect(nextLevel)
+	$Player.position = $Level/Level/StartPos.global_position
 
 
 func _on_player_hit() -> void:

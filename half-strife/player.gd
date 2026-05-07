@@ -53,31 +53,46 @@ func _process(delta: float) -> void:
 		$PlayerSprite.animation = currentWeapon + animation
 		$PlayerSprite.play()
 
+func reset():
+	health = 100
+	hittable = true
+	
+	$Attack.bodysWall = []
+	$Attack.bodysMelee = []
+	
+	$Attack.heldWeapons = [0]
+	$Attack.ammo = [1,0,0,0]
+	$Attack.weaponIndex = 0
+	global_position = Vector2.ZERO
+
+
 func check_damage():
 	for i in range(get_slide_collision_count()):
+		
 		var col = get_slide_collision(i)
 		var collider = col.get_collider()
-	
-		if health <= 0:
-			health = 0
-			hittable = false
 		
-		if hittable and collider.is_in_group("enemies"):
-			health -= randi_range(8, 12)
+		if collider != null:
 			if health <= 0:
 				health = 0
+				hittable = false
 			
-			var direction = (global_position - collider.global_position).normalized()
-			var knockback_force = 800
-			velocity = direction * knockback_force
-			
-			set_collision_layer_value(1, false)
-			set_collision_mask_value(1, false)
-			hittable = false
-			
-			$DamageCooldown.start()
-			hit.emit()
-			return
+			if hittable and collider.is_in_group("enemies"):
+				health -= randi_range(8, 12)
+				if health <= 0:
+					health = 0
+				
+				var direction = (global_position - collider.global_position).normalized()
+				var knockback_force = 800
+				velocity = direction * knockback_force
+				
+				set_collision_layer_value(1, false)
+				set_collision_mask_value(1, false)
+				hittable = false
+				
+				$DamageCooldown.start()
+				hit.emit()
+				return
 
 func _on_attack_cooldown_timeout() -> void:
 	$AttackCooldown.stop()

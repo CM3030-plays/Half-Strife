@@ -4,8 +4,8 @@ var bodysMelee = []
 var bodysWall = []
 
 var weapons = ["crowbar", "revolver", "shotgun", "smg"]
-@export var heldWeapons = [2, 3]
-@export var ammo = [1, 30, 12, 150]
+@export var heldWeapons = [0]
+@export var ammo = [1, 0, 0, 0]
 var maxAmmo = [1, 30, 12, 150]
 
 @export var weaponIndex = 0
@@ -47,7 +47,7 @@ func _on_player_attack(_weapon : String) -> void:
 		
 		for body in bodysMelee:
 			if body.has_method("takeDamage"):
-				body.takeDamage(50, Vector2.ZERO)
+				body.takeDamage(40, Vector2.ZERO)
 	
 	if weapon == "shotgun":
 		if ammo[index] <= 0:

@@ -71,7 +71,7 @@ texture = SubResource("GradientTexture2D_8sq4i")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1313003202]
 position = Vector2(576, 320)
 scale = Vector2(11.22807, 11.999999)
-energy = 0.96
+energy = 0.92
 blend_mode = 1
 height = 0.07
 

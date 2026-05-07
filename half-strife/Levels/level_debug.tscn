@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bfco6cv1ihwdi" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0babtech8b.png" id="10_od4o4"]
 [ext_resource type="PackedScene" uid="uid://bscf74onitq78" path="res://headcrab.tscn" id="11_unbmy"]
 [ext_resource type="PackedScene" uid="uid://cvnkqjt1fre60" path="res://ammo.tscn" id="12_854xt"]
-[ext_resource type="Texture2D" uid="uid://djr62evwqnlah" path="res://assets/doorLight.png" id="13_fck6n"]
+[ext_resource type="PackedScene" uid="uid://bmhqlngaenrgw" path="res://level_change.tscn" id="14_2agai"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_074og"]
 tile_data = PackedInt32Array(0, 5, 0, 131072, 5, 0, 2, 5, 0, 131074, 5, 0)
@@ -135,9 +135,6 @@ sources/1 = SubResource("TileSetAtlasSource_8cbvb")
 sources/2 = SubResource("TileSetAtlasSource_ron8g")
 sources/3 = SubResource("TileSetAtlasSource_ifnyy")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2agai"]
-size = Vector2(63, 20)
-
 [node name="Level" type="Node2D" unique_id=657810730]
 script = ExtResource("1_2agai")
 
@@ -246,19 +243,4 @@ position = Vector2(857, 347)
 [node name="Headcrab25" parent="Enemies" unique_id=1246969449 groups=["enemies"] instance=ExtResource("11_unbmy")]
 position = Vector2(857, 347)
 
-[node name="levelChange" type="Area2D" parent="." unique_id=1938597897]
-position = Vector2(-125, 82)
-
-[node name="enter" type="CollisionShape2D" parent="levelChange" unique_id=1027555140]
-position = Vector2(18.5, 0)
-shape = SubResource("RectangleShape2D_2agai")
-
-[node name="door" type="PointLight2D" parent="levelChange" unique_id=8927074]
-position = Vector2(17, 152)
-energy = 0.87
-shadow_enabled = true
-texture = ExtResource("13_fck6n")
-offset = Vector2(0, -50.79)
-texture_scale = 0.2
-
-[connection signal="body_entered" from="levelChange" to="." method="_on_level_change_body_entered"]
+[node name="levelChange" parent="." unique_id=434510687 instance=ExtResource("14_2agai")]
