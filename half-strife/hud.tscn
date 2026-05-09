@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://48p04wmgen18" path="res://main_menu.tscn" id="2_a2258"]
 [ext_resource type="FontFile" uid="uid://mgbyjyqdaawr" path="res://Fonts/trebuc.ttf" id="3_8sq4i"]
 [ext_resource type="Texture2D" uid="uid://hgpqjpwh1sbk" path="res://assets/HudWep (1).png" id="4_640wx"]
+[ext_resource type="Script" uid="uid://clgjwp57uyjo0" path="res://deathText.gd" id="6_1xsix"]
 
 [sub_resource type="Theme" id="Theme_640wx"]
 default_font = ExtResource("3_8sq4i")
@@ -19,6 +20,71 @@ width = 114
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.7293233, 0.48214287)
+
+[sub_resource type="Animation" id="Animation_a2258"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_colors/font_color:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_1xsix"]
+resource_name = "gameover"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_rftc2"]
+resource_name = "text fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rftc2"]
+_data = {
+&"RESET": SubResource("Animation_a2258"),
+&"gameover": SubResource("Animation_1xsix"),
+&"text fade": SubResource("Animation_rftc2")
+}
 
 [node name="Hud" type="CanvasLayer" unique_id=1323355103]
 process_mode = 3
@@ -73,7 +139,7 @@ texture = SubResource("GradientTexture2D_8sq4i")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1313003202]
 position = Vector2(576, 320)
 scale = Vector2(11.22807, 11.999999)
-energy = 0.92
+energy = 0.97
 blend_mode = 1
 height = 0.07
 
@@ -94,6 +160,25 @@ bus = &"SFX"
 visible = false
 texture = ExtResource("4_640wx")
 offset = Vector2(86, 23)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1010142445]
+offset_right = 1152.0
+offset_bottom = 652.0
+mouse_filter = 2
+color = Color(0.04, 0, 0.0020000075, 0)
+
+[node name="Label" type="Label" parent="." unique_id=868564052]
+offset_left = 386.0
+offset_top = 255.0
+offset_right = 775.0
+offset_bottom = 382.0
+theme_override_colors/font_color = Color(0.62, 0.62, 0.62, 1)
+theme_override_fonts/font = ExtResource("3_8sq4i")
+horizontal_alignment = 1
+script = ExtResource("6_1xsix")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=372738063]
+libraries/ = SubResource("AnimationLibrary_rftc2")
 
 [connection signal="finished" from="music" to="." method="_on_music_finished"]
 [connection signal="timeout" from="weaponTime" to="." method="_on_weapon_time_timeout"]

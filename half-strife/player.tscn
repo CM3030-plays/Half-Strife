@@ -574,10 +574,6 @@ wait_time = 0.05
 
 [node name="DamageCooldown" type="Timer" parent="." unique_id=1185803211]
 
-[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1600107113]
-position = Vector2(1, 0)
-current = true
-
 [node name="Weapons" type="AudioStreamPlayer2D" parent="." unique_id=2007322071]
 bus = &"SFX"
 

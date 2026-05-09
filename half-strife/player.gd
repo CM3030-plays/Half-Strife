@@ -68,7 +68,7 @@ func reset():
 	$Attack.heldWeapons = [0]
 	$Attack.ammo = [1,0,0,0]
 	$Attack.weaponIndex = 0
-	global_position = Vector2.ZERO
+	velocity = Vector2.ZERO
 
 
 func check_damage():
@@ -81,6 +81,9 @@ func check_damage():
 			if health <= 0:
 				health = 0
 				hittable = false
+				reset()
+				death.emit()
+				return
 			
 			if hittable and collider.is_in_group("enemies"):
 				health -= randi_range(8, 12)

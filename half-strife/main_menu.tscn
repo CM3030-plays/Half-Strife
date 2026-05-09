@@ -22,6 +22,7 @@ offset_bottom = 178.0
 theme = ExtResource("2_fu7sn")
 text = "New Game"
 flat = true
+alignment = 0
 
 [node name="Options" type="Button" parent="." unique_id=579942364]
 offset_left = 64.0
@@ -112,8 +113,8 @@ ticks_on_borders = true
 [connection signal="pressed" from="Options" to="." method="options"]
 [connection signal="pressed" from="Options" to="." method="clickSound"]
 [connection signal="mouse_entered" from="Exit" to="." method="hoverSound"]
-[connection signal="pressed" from="Exit" to="." method="exit"]
 [connection signal="pressed" from="Exit" to="." method="clickSound"]
+[connection signal="pressed" from="Exit" to="." method="exit"]
 [connection signal="mouse_entered" from="OptionMenu/back" to="." method="hoverSound"]
 [connection signal="pressed" from="OptionMenu/back" to="." method="back"]
 [connection signal="pressed" from="OptionMenu/back" to="." method="clickSound"]

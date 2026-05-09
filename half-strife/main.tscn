@@ -13,6 +13,10 @@ script = ExtResource("1_w48qg")
 
 [node name="Player" parent="." unique_id=645128869 instance=ExtResource("7_272bh")]
 
+[node name="Listener" type="AudioListener2D" parent="." unique_id=1465161867]
+position = Vector2(576, 320)
+current = true
+
 [connection signal="startGame" from="Hud" to="." method="start"]
 [connection signal="death" from="Player" to="." method="restart"]
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]

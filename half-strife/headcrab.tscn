@@ -139,6 +139,7 @@ scale = Vector2(0.865, 0.865)
 shape = SubResource("CapsuleShape2D_dcngs")
 
 [node name="sounds" type="AudioStreamPlayer2D" parent="." unique_id=1539645752]
+max_polyphony = 2
 bus = &"SFX"
 
 [node name="Idle" type="Timer" parent="." unique_id=786227002]

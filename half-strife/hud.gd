@@ -36,6 +36,16 @@ func _input(event: InputEvent) -> void:
 		$Health.show()
 		$Ammo.show()
 
+func die():
+	$SFX.stream = AudioFiles.HEV["flatline"]
+	$SFX.play()
+	await $Label.gameOver()
+
+func win():
+	$music.stream = AudioFiles.HEV["success"]
+	$music.play()
+	await $Label.win()
+
 func _on_music_finished() -> void:
 	var temp = AudioFiles.music.pick_random()
 	while (temp == last_song):
@@ -53,6 +63,8 @@ func start():
 		$Health.show()
 		$Ammo.show()
 	else:
+		await $Label.start()
+		
 		gameRunning = true
 		get_tree().paused = false
 		startGame.emit()

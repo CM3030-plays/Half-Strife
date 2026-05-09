@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bmhqlngaenrgw"]
 
 [ext_resource type="Script" uid="uid://ds67e20pnvu2d" path="res://level_change.gd" id="1_3l1cm"]
+[ext_resource type="Texture2D" uid="uid://bf63c0bmu6eec" path="res://assets/PC _ Computer - Half-Life - Objects - Walls, Floors and Ceilings/-0fifties_case2.png" id="2_58lq6"]
 [ext_resource type="Texture2D" uid="uid://djr62evwqnlah" path="res://assets/doorLight.png" id="2_84v13"]
+[ext_resource type="AudioStream" uid="uid://d68ljpcacm3e" path="res://assets/sfx/access_granted.wav" id="3_84v13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2agai"]
 size = Vector2(63, 20)
@@ -11,9 +13,14 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_3l1cm")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1749092316]
+position = Vector2(18.75, 2.5)
+scale = Vector2(0.48828125, 0.4375)
+texture = ExtResource("2_58lq6")
+
 [node name="Direction" type="Marker2D" parent="." unique_id=1256454422]
 position = Vector2(18.5, 19)
-gizmo_extents = 20.0
+gizmo_extents = 19.0
 
 [node name="enter" type="CollisionShape2D" parent="." unique_id=888398198]
 position = Vector2(18.5, 0)
@@ -25,5 +32,13 @@ position = Vector2(17, 152)
 color = Color(0.51666665, 1, 0, 1)
 shadow_enabled = true
 texture = ExtResource("2_84v13")
-offset = Vector2(0, -50.79)
+offset = Vector2(0, -51.95)
 texture_scale = 0.2
+
+[node name="VOX" type="AudioStreamPlayer2D" parent="." unique_id=1978670656]
+stream = ExtResource("3_84v13")
+max_distance = 8000.0
+panning_strength = 1.3
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

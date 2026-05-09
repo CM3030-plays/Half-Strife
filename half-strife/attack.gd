@@ -64,7 +64,7 @@ func attack():
 				var body = ray.get_collider()
 				if body != null and body.has_method("takeDamage"):
 					var dir = -ray.global_transform.x.normalized()
-					body.takeDamage(40, dir)
+					body.takeDamage(100, dir)
 			
 			$"../Weapons".stream = AudioFiles.sfx["shotgun_fire"]
 			$Flash.show()

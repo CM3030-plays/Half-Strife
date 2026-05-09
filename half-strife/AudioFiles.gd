@@ -37,10 +37,12 @@ preload("res://assets/music/half-life (8).mp3")
 var HEV = {
 	"HEV_Intro" : preload("res://assets/sfx/hev_logon.wav"),
 	"health_critical" : preload("res://assets/sfx/health_critical.wav"),
+	"flatline" : preload("res://assets/sfx/flatline.wav"),
 	
 	"ui" : preload("res://assets/sfx/wpn_select.wav"),
 	"ui_hover" : preload("res://assets/sfx/wpn_select.wav"),
-	"ui_click" : preload("res://assets/sfx/launch_select2.wav")
+	"ui_click" : preload("res://assets/sfx/launch_select2.wav"),
+	"success" : preload("res://assets/music/half-life17.mp3")
 }
 
 # The shameful use of audio index file for textures
