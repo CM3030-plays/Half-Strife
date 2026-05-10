@@ -2,7 +2,7 @@ extends Label
 
 signal done
 
-var intro = "Subject:\nDr. Elijah Meyers\n\nStatus:\nTrapped under Black Mesa Bio-lockdown\n\nGoal:\nSurvive"
+var intro = "Subject:\nDr. Elijah Meyers\n\nStatus:\nTrapped under Black Mesa Bio-lockdown\n\nGoal:\nEscape"
 
 var deathText = "Subject:\nDr. Elijah Meyers\n\nStatus:\nPresumed to have died in the Black Mesa Incident."
 var winText = "Subject:\nDr. Elijah Meyers\n\nStatus:\nOut of range."

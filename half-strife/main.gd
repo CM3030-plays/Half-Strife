@@ -1,6 +1,8 @@
 extends Node2D
-const levels = ["res://Levels/level_1.tscn", "res://Levels/level_2.tscn", "res://Levels/level_3.tscn"]
-@export var levelIndex = 0
+const levels = ["res://Levels/level_1.tscn", "res://Levels/level_2.tscn", "res://Levels/level_3.tscn","res://Levels/level_4.tscn", "res://Levels/level_5.tscn"]
+
+var initial = 0
+var levelIndex = initial
 
 var startingLevel = levels[levelIndex]
 var currentLevel
@@ -35,7 +37,7 @@ func restart():
 	await  $Hud.die()
 	
 	loadLevel(startingLevel)
-	levelIndex = 0
+	levelIndex = initial
 	$Hud/Health.hide()
 	$Hud/Ammo.hide()
 	$Hud/menu.show()
@@ -54,7 +56,7 @@ func restartWin():
 	await  $Hud.win()
 	
 	loadLevel(startingLevel)
-	levelIndex = 0
+	levelIndex = initial
 	$Hud/Health.hide()
 	$Hud/Ammo.hide()
 	$Hud/menu.show()

@@ -5,8 +5,8 @@ var bodysWall = []
 
 var weapons = ["crowbar", "revolver", "shotgun", "smg"]
 @export var heldWeapons = [0]
-@export var ammo = [1, 0, 0, 0]
-var maxAmmo = [1, 30, 12, 150]
+@export var ammo = [1, 100, 0, 0]
+var maxAmmo = [1, 30, 24, 150]
 
 @export var weaponIndex = 0
 
@@ -93,7 +93,7 @@ func attack():
 	if weapon == "revolver":
 		if !ammo[index] <= 0:
 			ammo[index] -= 1
-			$"../AttackCooldown".start(1)
+			$"../AttackCooldown".start(0.985)
 			
 			var straight = $Straight.get_collider()
 			$"../Weapons".stream = AudioFiles.sfx["revolver_fire"].pick_random()
