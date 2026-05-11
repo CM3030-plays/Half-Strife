@@ -93,7 +93,7 @@ func attack():
 	if weapon == "revolver":
 		if !ammo[index] <= 0:
 			ammo[index] -= 1
-			$"../AttackCooldown".start(0.985)
+			$"../AttackCooldown".start(0.975)
 			
 			var straight = $Straight.get_collider()
 			$"../Weapons".stream = AudioFiles.sfx["revolver_fire"].pick_random()

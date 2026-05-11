@@ -2,11 +2,11 @@ extends Label
 
 signal done
 
-var intro = "Subject:\nDr. Elijah Meyers\n\nStatus:\nTrapped under Black Mesa Bio-lockdown\n\nGoal:\nEscape"
+var intro = "Subject:\nDr. Elijah Meyers\n\nStatus:\nTrapped by Black Mesa Bio-lockdown\n\nCurrent Goal:\nEscape"
 
 var deathText = "Subject:\nDr. Elijah Meyers\n\nStatus:\nPresumed to have died in the Black Mesa Incident."
-var winText = "Subject:\nDr. Elijah Meyers\n\nStatus:\nOut of range."
-var credits = "Valve\nSource Sounds\nmaiik28\nFace Punch Studios\nsmoe."
+var winText = "Subject:\nDr. Elijah Meyers\n\nStatus:\nOut of Range."
+var credits = "Valve\nSource Sounds\nmaiik28\nFacepunch Studios\nsmoe.\nJmoeb"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,7 +37,7 @@ func win():
 	$"../AnimationPlayer".play("text fade")
 	await  $"../AnimationPlayer".animation_finished
 	
-	add_theme_color_override("font_color",Color("9e9e9e")) # same RGB, full alpha
+	add_theme_color_override("font_color",Color("9e9e9e"))
 	await printText(credits, 5.0)
 	
 	await get_tree().create_timer(3,true).timeout
