@@ -58,6 +58,7 @@ func _on_music_finished() -> void:
 func start():
 	if gameRunning:
 		get_tree().paused = false
+		pause = false
 		$menu.back()
 		$menu.hide()
 		$Health.show()

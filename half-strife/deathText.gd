@@ -13,10 +13,12 @@ func _ready() -> void:
 	text = ""
 	
 func start():
+	$"../ColorRect".set_mouse_filter(Control.MOUSE_FILTER_STOP)
 	$"../AnimationPlayer".play("gameover")
 	await  $"../AnimationPlayer".animation_finished
 	await printText(intro, 3.0)
 	await get_tree().create_timer(1.5,true).timeout
+	$"../ColorRect".set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
 	$"../ColorRect".color.a = 0
 	text = ""
 
