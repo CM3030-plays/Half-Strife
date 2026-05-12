@@ -121,16 +121,31 @@ scrollable = false
 tick_count = 11
 ticks_on_borders = true
 
+[node name="Label" type="Label" parent="." unique_id=2140573590]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -213.0
+offset_top = -73.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 19
+text = "Hold LMB to Attack
+Scroll to Switch Weapons    "
+
 [connection signal="mouse_entered" from="Start" to="." method="hoverSound"]
 [connection signal="pressed" from="Start" to="." method="clickSound"]
 [connection signal="mouse_entered" from="Options" to="." method="hoverSound"]
-[connection signal="pressed" from="Options" to="." method="clickSound"]
 [connection signal="pressed" from="Options" to="." method="options"]
+[connection signal="pressed" from="Options" to="." method="clickSound"]
 [connection signal="mouse_entered" from="Exit" to="." method="hoverSound"]
 [connection signal="pressed" from="Exit" to="." method="clickSound"]
 [connection signal="pressed" from="Exit" to="." method="exit"]
 [connection signal="mouse_entered" from="OptionMenu/back" to="." method="hoverSound"]
-[connection signal="pressed" from="OptionMenu/back" to="." method="clickSound"]
 [connection signal="pressed" from="OptionMenu/back" to="." method="back"]
+[connection signal="pressed" from="OptionMenu/back" to="." method="clickSound"]
 [connection signal="drag_ended" from="OptionMenu/sfx" to="." method="on_vol_change_SFX"]
 [connection signal="drag_ended" from="OptionMenu/music" to="." method="on_vol_change"]
